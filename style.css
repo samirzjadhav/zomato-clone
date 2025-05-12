@@ -148,7 +148,7 @@ nav .search_wrapper {
   top: 0;
   left: 0;
   width: 100%;
-  height: 100vh;
+  height: 0vh;
   background-color: var(--white-color);
   z-index: 9999;
   overflow: hidden;
@@ -198,4 +198,199 @@ nav .search_wrapper {
 
 .Sidebar_menu li a:hover {
   color: rgb(28, 28, 28);
+}
+
+/* Header */
+
+header {
+  width: 100%;
+  height: 60vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  padding: 0 12%;
+  background-image: url("Image/zomato_banner.avif");
+  background-position: center center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  position: relative;
+  z-index: 1;
+}
+
+.hero_content {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+}
+
+.Hero_Image {
+  width: 280px;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Hero_Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: contain;
+}
+
+.hero_content h1 {
+  color: var(--white-color);
+  font-weight: 400;
+  font-size: 2rem;
+  padding-top: 30px;
+}
+
+.search_wrapper {
+  width: 50%;
+  display: flex;
+  align-content: center;
+  margin-top: 30px;
+}
+
+.search_wrapper_icon {
+  width: 70px;
+  font-size: 1.2rem;
+  height: 100%;
+  cursor: pointer;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  position: relative;
+}
+
+.search_wrapper_icon:after {
+  content: "";
+  position: absolute;
+  left: 0;
+  top: 25%;
+  width: 2px;
+  height: 30px;
+  background-color: rgb(207, 207, 207);
+}
+
+.search_cate {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  background-color: var(--white-color);
+  border-radius: 10px;
+}
+
+.search_box {
+  width: 35%;
+  height: 100px;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.search_box {
+  width: 35%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  gap: 5px;
+  border-radius: 20px;
+  position: relative;
+}
+
+.search_box a {
+  color: var(--black-color);
+}
+
+.search_box i {
+  transition: var(--transition);
+  font-size: 1.3rem;
+}
+
+.Search_Content {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Search_Content div {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search_box:hover .ri-arrow-down-s-fill {
+  transform: rotate(180deg);
+}
+
+.input_box {
+  width: 65%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+}
+
+.input_box input {
+  width: 100%;
+  height: 100%;
+  padding-left: 2%;
+  font-size: 1rem;
+  font-weight: 400;
+  border: none;
+  outline: none;
+  border-radius: 8px;
+}
+
+.search_dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 0;
+  width: 300px;
+  overflow: hidden;
+  background-color: var(--bg-light);
+  border-radius: 5px;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  transition: var(--transition2);
+}
+
+.search_box:hover .search_dropdown {
+  top: 105%;
+  opacity: 1 !important;
+  height: 100px;
+}
+
+.search_dropdown li a {
+  width: 100%;
+  padding: 1.8rem 1.8rem 1.8rem 1.5rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+/* location_info */
+
+.location_info p:nth-child(1) {
+  color: var(--prim-color);
+  font-size: 1rem;
+  text-transform: capitalize;
+}
+
+.location_info p {
+  color: var(--light-text);
+  font-size: 0.9rem;
+  font-weight: 400;
+  text-align: left;
 }
