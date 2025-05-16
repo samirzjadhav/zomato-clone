@@ -80,6 +80,49 @@
         </div>
       </div>
     </div>
+    <!-- Registration Form -->
+    <div class="ModelFrom Registration_form">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Registration</h2>
+          <button class="close-btn" id="close-btn2">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="phone-input"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="text"
+              placeholder="Email"
+              class="phone-input"
+              required
+            />
+          </div>
+          <button class="otp-btn">Send One Time Password</button>
+          <div class="separator"><span>Or</span></div>
+          <p id="agreement">
+            <input type="checkbox" /> I agree to Zomato's Terms of Service,
+            Policy and Content Policies
+          </p>
+          <div class="google-btn">
+            <div class="icon"><img src="Image/google.jpg" alt="" /></div>
+            Sign in with Google
+          </div>
+          <div class="modal-footer">
+            <p>
+              Already have an account?
+              <a href="#" id="openRegistration">Log in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
     <!-- Header -->
     <header>
       <div class="hero_content">
@@ -146,5 +189,11 @@
       </div>
     </header>
     <script src="./script.js"></script>
+    <script>
+      const Login_form = document.querySelector(".ModelForm");
+      const LoginBtn = document.querySelector("#LoginBtn");
+      const LoginBtn2 = document.querySelector("#LoginBtn2");
+      const NavSigntbn = document.querySelector("#NavSigntbn");
+    </script>
   </body>
 </html>
