@@ -67,16 +67,16 @@
             <span class="icon"><img src="./Image/email.svg" alt="" /></span>
             Continue with Email
           </button>
-          <div class="google-btn">
+          <button class="google-btn">
             <div class="icon"><img src="Image/google.jpg" alt="" /></div>
             Sign in with Google
-          </div>
-          <div class="modal-footer">
-            <p>
-              New to Zomato ?
-              <a href="#" id="openRegistration">Create Account</a>
-            </p>
-          </div>
+          </button>
+        </div>
+        <div class="modal-footer">
+          <p>
+            New to Zomato ?
+            <a href="#" id="openRegistration">Create Account</a>
+          </p>
         </div>
       </div>
     </div>
@@ -117,12 +117,13 @@
           <div class="modal-footer">
             <p>
               Already have an account?
-              <a href="#" id="openRegistration">Log in</a>
+              <a href="#" id="openlogin">Log in</a>
             </p>
           </div>
         </div>
       </div>
     </div>
+
     <!-- Header -->
     <header>
       <div class="hero_content">
@@ -190,10 +191,61 @@
     </header>
     <script src="./script.js"></script>
     <script>
-      const Login_form = document.querySelector(".ModelForm");
+      const Login_Form = document.querySelector(".ModelFrom");
+
       const LoginBtn = document.querySelector("#LoginBtn");
       const LoginBtn2 = document.querySelector("#LoginBtn2");
-      const NavSigntbn = document.querySelector("#NavSigntbn");
+      const NavSigninbtn = document.querySelector("#NavSigntbtn");
+      const NavLoginbtn = document.querySelector("#NavLoginbtn");
+      const closebtn = document.querySelector(".modal-header button");
+
+      const Registration_form = document.querySelector(".Registration_form");
+      const close_btn2 = document.querySelector("#SignUpBtn");
+      const closebtn2 = document.querySelector("#close-btn2");
+      const openlogin = document.querySelector("#openlogin");
+      const openRegistration = document.querySelector("#openRegistration");
+
+      closebtn.addEventListener("click", function () {
+        Login_Form.style.display = "none";
+      });
+
+      LoginBtn.addEventListener("click", function () {
+        Login_Form.style.display = "flex";
+      });
+
+      NavSigninbtn.addEventListener("click", function () {
+        Login_form.style.display = "flex";
+      });
+
+      NavSigninbtn.addEventListener("click", function () {
+        Login_form.style.display = "flex";
+      });
+
+      LoginBtn2.addEventListener("click", function () {
+        Registration_form.style.display = "flex";
+      });
+
+      closebtn2.addEventListener("click", function () {
+        Registration_form.style.display = "none";
+      });
+
+      close_btn2.addEventListener("click", function () {
+        Registration_form.style.display = "flex";
+      });
+
+      NavSigninbtn.addEventListener("click", function () {
+        Registration_form.style.display = "flex";
+      });
+
+      openlogin.addEventListener("click", function () {
+        Registration_form.style.display = "none";
+        Login_form.style.display = "flex";
+      });
+
+      openRegistration.addEventListener("click", function () {
+        Registration_form.style.display = "flex";
+        Login_form.style.display = "none";
+      });
     </script>
   </body>
 </html>
