@@ -246,6 +246,31 @@
         Registration_form.style.display = "flex";
         Login_form.style.display = "none";
       });
+
+      const nav = document.querySelector("nav");
+      const body = document.querySelector("body");
+      let search_box = document.querySelector(".search_wrapper");
+      let logo = document.querySelector(".logo a");
+      let menu_icons = document.querySelector(".menu li i");
+      let menu_links = document.querySelector(".menu li a");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+          nav.classList.add("sticky_nav");
+          search_box.classList.add("sticky_search_box");
+          logo.classList.add("sticky_menu");
+          menu_links.forEach((links) => {
+            links.classList.add("sticky_menu");
+          });
+        } else {
+          nav.classList.remove("sticky_nav");
+          search_box.classList.remove("sticky_search_box");
+          logo.classList.remove("sticky_menu");
+          menu_links.forEach((links) => {
+            links.classList.remove("sticky_menu");
+          });
+        }
+      });
     </script>
   </body>
 </html>
