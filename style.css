@@ -403,6 +403,10 @@ header {
   margin-bottom: 12px;
 }
 
+.hidden {
+  display: none !important;
+}
+
 /* Model Form */
 
 .ModelFrom {
@@ -652,4 +656,43 @@ select {
 
 .Product_Card:hover {
   transform: scale(1.09);
+}
+
+.Collections {
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.Collections_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+  flex-direction: row;
+  gap: 30px;
+}
+
+.Collections_title h6 {
+  color: var(--black-color);
+  font-size: 1.1rem;
+  font-weight: 300;
+  text-transform: capitalize;
+}
+
+.Collections_title span {
+  display: flex;
+  align-items: center;
+  font-size: 1rem;
+  color: var(--prim-color);
+  text-transform: capitalize;
+  cursor: pointer;
+}
+
+.Collections_Wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  place-items: center;
+  place-content: center;
+  gap: 10px;
 }
