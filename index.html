@@ -23,7 +23,7 @@
       <ul class="menu">
         <li><a href="#">Add restaurant</a></li>
         <li><a href="#" id="LoginBtn">Log In</a></li>
-        <li><a href="#" id="SingUpBtn">Sign Up</a></li>
+        <li><a href="#" id="SignUpBtn">Sign Up</a></li>
       </ul>
       <div class="Sidebar">
         <div class="Sidebar_Top">
@@ -37,7 +37,7 @@
         <div class="Sidebar_menu">
           <li><a href="#">Add restaurant</a></li>
           <li><a href="#" id="LoginBtn">Log In</a></li>
-          <li><a href="#" id="SingUpBtn">Sign Up</a></li>
+          <li><a href="#" id="SignUpBtn">Sign Up</a></li>
         </div>
       </div>
     </nav>
@@ -224,12 +224,71 @@
         </div>
       </a>
     </section>
-    <section class="Collection">
-      <div class="Collection_title Section_title">
-        <div class="Collection_info">
+    <section class="Collections">
+      <div class="Collections_title Section_title">
+        <div class="Collections_info">
           <h2>Collections</h2>
-          <h6>Explore curated lists of top restaurants, cafes, pubs in Vadodara, based on trends</h6>
+          <h6>
+            Explore curated lists of top restaurants, cafes, pubs in Vadodara,
+            based on trends
+          </h6>
         </div>
+        <span class="" id="LoginBtn2">
+          All Collection in Vadodara
+          <i class="ri-arrow-right-s-fill"></i>
+        </span>
+      </div>
+      <div class="Collections_Wrap">
+        <a href="./Collection.html">
+          <div class="Collections_Item">
+            <div class="Collections_Image Section_Image">
+              <img src="Image/Collections1.avif" alt="Collection-image" />
+            </div>
+            <div class="Collections_Content">
+              <p>16 Unmissable Gujarati Delicacies</p>
+              <h6>9 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="Collection_Wrap">
+        <a href="./Collection.html">
+          <div class="Collection_Item">
+            <div class="Collection_Image Section_Image">
+              <img src="Image/Collections2.avif" alt="Collection-image" />
+            </div>
+            <div class="Collection_Content">
+              <p>Pan-Asian Restaurants</p>
+              <h6>9 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="Collection_Wrap">
+        <a href="./Collection.html">
+          <div class="Collection_Item">
+            <div class="Collection_Image Section_Image">
+              <img src="Image/Collections3.avif" alt="Collection-image" />
+            </div>
+            <div class="Collection_Content">
+              <p>Best Luxury Dining Places</p>
+              <h6>8 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
+          </div>
+        </a>
+      </div>
+      <div class="Collection_Wrap">
+        <a href="./Collection.html">
+          <div class="Collection_Item">
+            <div class="Collection_Image Section_Image">
+              <img src="Image/Collections4.avif" alt="Collection-image" />
+            </div>
+            <div class="Collection_Content">
+              <p>8 Places for South Indian Delicacies</p>
+              <h6>7 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
+          </div>
+        </a>
       </div>
     </section>
     <script src="./script.js"></script>
@@ -238,12 +297,13 @@
 
       const LoginBtn = document.querySelector("#LoginBtn");
       const LoginBtn2 = document.querySelector("#LoginBtn2");
-      const NavSigninbtn = document.querySelector("#NavSigntbtn");
+      const NavSigninbtn = document.querySelector("#NavSigninbtn");
       const NavLoginbtn = document.querySelector("#NavLoginbtn");
       const closebtn = document.querySelector(".modal-header button");
 
       const Registration_form = document.querySelector(".Registration_form");
       const close_btn2 = document.querySelector("#SignUpBtn");
+      console.log(close_btn2);
       const closebtn2 = document.querySelector("#close-btn2");
       const openlogin = document.querySelector("#openlogin");
       const openRegistration = document.querySelector("#openRegistration");
@@ -273,7 +333,7 @@
       });
 
       close_btn2.addEventListener("click", function () {
-        Registration_form.style.display = "flex";
+        Registration_form.style.display = "none";
       });
 
       NavSigninbtn.addEventListener("click", function () {
