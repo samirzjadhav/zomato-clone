@@ -692,3 +692,66 @@ select {
   place-content: center;
   gap: 10px;
 }
+
+.Collections_Item {
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: relative;
+  z-index: 2;
+}
+
+.Collections_Item:after {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9;
+  width: 100%;
+  height: 100%;
+  background: linear-gradient(
+    0deg,
+    rgba(0, 0, 0, 0.9) 0%,
+    rgba(0, 0, 0, 0.05) 50%,
+    rgba(0, 0, 0, 0.05) 85%
+  );
+}
+
+.Collections_Image {
+  width: 100%;
+  height: 350px;
+  border-radius: 8px;
+  overflow: hidden;
+  position: relative;
+}
+
+.Collections_Image img {
+  width: 100%;
+  object-fit: cover;
+}
+
+.Collection_Content {
+  width: 100%;
+  position: absolute;
+  color: var(--white-color);
+  z-index: 99;
+  bottom: 0;
+  left: 0;
+  padding: 30px 10px 14px 14px;
+}
+
+.Collection_Content p {
+  width: 100%;
+  color: var(--white-color);
+  font-size: 1rem;
+  font-weight: 400;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.Collection_Content h6 {
+  font-size: 0.8rem;
+  font-size: 400;
+}
