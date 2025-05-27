@@ -755,3 +755,73 @@ select {
   font-size: 0.8rem;
   font-size: 400;
 }
+
+/* Popular Locations */
+
+.Popular_Locations {
+  flex-direction: column;
+}
+
+.Popular_Locations_title {
+  width: 100%;
+  align-items: flex-start;
+}
+
+.Popular_Locations_title p {
+  font-size: 2.5rem;
+  text-transform: capitalize;
+  font-weight: 400;
+}
+
+.Popular_Locations_title span {
+  font-weight: 500;
+}
+
+.Popular-Locations_Wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(3, 1fr);
+  gap: 30px;
+  place-items: center;
+  place-content: center;
+}
+
+.Popular-Locations_Wrap a {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.Popular_Locations_Items {
+  display: flex;
+  width: 100%;
+  justify-content: space-between;
+  align-items: center;
+  box-shadow: rgba(28, 28, 28, 0.08) 0px 1.42623px 2.85246px;
+  border: 1px solid rgb(232 232, 232);
+  padding: 14px 30px;
+  border-radius: 8px;
+  cursor: pointer;
+  transition: var(--transition);
+}
+
+.Popular_Locations_Item_Info h5 {
+  font-size: 1.2rem;
+  font-weight: 400;
+  color: var(--black-color);
+}
+
+.Popular_Locations_Item_Info p {
+  font-size: 1rem;
+  color: var(--bg-color);
+  font-weight: 300;
+}
+
+.Popular_Locations_Items i {
+  font-size: 1.3rem;
+}
+
+.Popular_Locations_Items:hover {
+  box-shadow: rgba(28, 28, 28, 0.253) 0px 5px 5px;
+}
