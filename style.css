@@ -825,3 +825,79 @@ select {
 .Popular_Locations_Items:hover {
   box-shadow: rgba(28, 28, 28, 0.253) 0px 5px 5px;
 }
+
+/* Banner Section */
+
+.Banner {
+  background-color: #fffbf7;
+}
+
+.banner_Radio_btn {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 30px;
+  padding: 20px 0;
+}
+
+.banner_Radio_btn li label {
+  font-size: 1rem;
+  color: var(--bg-color);
+  font-weight: 300;
+}
+
+.banner_Input_Box {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  padding-bottom: 20px;
+}
+
+.banner_Input_Box input {
+  width: 70%;
+  padding-left: 10px;
+  height: 45px;
+  border: 0.1px solid rgb(207, 207, 207);
+  background-color: var(--white-color);
+  color: var(--black-color);
+  border-radius: 8px;
+  font-size: 1.1rem;
+  font-weight: 300;
+}
+
+.banner_Input_Box button {
+  width: 30%;
+  height: 45px;
+  color: vat(--white-color);
+  background-color: var(--prim-color);
+  border: none;
+  border-radius: 8px;
+}
+
+.banner_Input_Box button a {
+  color: var(--white-color);
+  font-size: 1rem;
+}
+
+.banner_title .banner_text {
+  font-size: 0.9rem;
+  color: rgb(156, 156, 156);
+  padding: 10px 0px;
+  margin-top: 20px;
+}
+
+.Google_Pay_Image {
+  width: 250px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 20px;
+}
+
+.Google_Pay_Image img {
+  width: 100%;
+  height: 100%;
+}
