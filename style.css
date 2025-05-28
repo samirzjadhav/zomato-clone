@@ -1008,3 +1008,45 @@ footer {
   font-weight: 300;
   text-align: center;
 }
+
+/* Restaurants Page Style */
+
+.header_section {
+  background-color: var(--white-color);
+  min-height: 10vh;
+  width: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  position: fixed;
+  top: 0;
+  left: 0;
+  z-index: 999;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.1);
+}
+
+.header_section nav {
+  height: 90px;
+  background-color: var(--white-color);
+}
+
+.header_section .search_wrapper {
+  display: flex;
+  align-items: center;
+  box-shadow: 0 0 20px rgb(0, 0, 0, 0.1);
+}
+
+.header_section .Sidebar {
+  display: flex;
+  position: relative !important;
+  height: auto;
+  width: fit-content;
+}
+
+.header_section .Sidebar .Sidebar_menu {
+  flex-direction: row;
+}
+
+.header_section .Sidebar .Sidebar_menu a {
+  color: #696969;
+}
