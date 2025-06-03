@@ -10,10 +10,8 @@
       href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
     />
     <!-- Swiper SLider Cdn -->
-    <links
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.css"
-    />
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
     <title>Zomato Clone</title>
   </head>
   <body>
@@ -195,6 +193,94 @@
       </div>
     </div>
 
+    <section class="Collections bg_section">
+      <div class="Collections_title">
+        <div class="Collections_info">
+          <h2>Collections</h2>
+          <h5>
+            Explore Curated lists of top restaurants, cafes, pubs, and bars in
+            Vadodara, based on trends
+          </h5>
+        </div>
+        <span id="LoginBtn2">
+          All Collections in Vadodara <i class="ri-arrow-right-s-fill"></i>
+        </span>
+      </div>
+      <div class="swiper swiper-rastaurant">
+        <div class="swiper-wrapper">
+          <div class="swiper-slide">
+            <div class="Collections_Item">
+              <div class="Collections_Image Section_Image">
+                <img
+                  src="Image/Collections1.avif"
+                  alt="Collections_Items_image"
+                />
+              </div>
+              <div class="Collection_Content">
+                <p>10 Gourmet Pizza Places</p>
+                <h6>9 Places <i class="ri-arrow-right-s-fill"></i></h6>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Collections_Item">
+              <div class="Collections_Image Section_Image">
+                <img
+                  src="Image/Collections2.avif"
+                  alt="Collections_Items_image"
+                />
+              </div>
+              <div class="Collection_Content">
+                <p>Great Cafes</p>
+                <h6>9 Places <i class="ri-arrow-right-s-fill"></i></h6>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Collections_Item">
+              <div class="Collections_Image Section_Image">
+                <img
+                  src="Image/Collections5.png"
+                  alt="Collections_Items_image"
+                />
+              </div>
+              <div class="Collection_Content">
+                <p>Serene Rooftop Places</p>
+                <h6>5 Places <i class="ri-arrow-right-s-fill"></i></h6>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Collections_Item">
+              <div class="Collections_Image Section_Image">
+                <img
+                  src="Image/Collections6.png"
+                  alt="Collections_Items_image"
+                />
+              </div>
+              <div class="Collection_Content">
+                <p>Local Favorite Places</p>
+                <h6>8 Places <i class="ri-arrow-right-s-fill"></i></h6>
+              </div>
+            </div>
+          </div>
+          <div class="swiper-slide">
+            <div class="Collections_Item">
+              <div class="Collections_Image Section_Image">
+                <img
+                  src="Image/Collections7.png"
+                  alt="Collections_Items_image"
+                />
+              </div>
+              <div class="Collection_Content">
+                <p>13 Unmissable Gujarati Delicacies</p>
+                <h6>11 Places <i class="ri-arrow-right-s-fill"></i></h6>
+              </div>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
 
     <footer>
       <div class="Footer_Wrap">
@@ -257,9 +343,27 @@
     </footer>
 
     <!-- Swiper Slider Cdn -->
-    <script src="https://cdnjs.cloudflare.com/ajax/libs/Swiper/11.0.5/swiper-bundle.min.js"></script>
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
+    />
+
     <script src="./script.js"></script>
     <script>
+      var swiper2 = new Swiper(".swiper-rastaurant", {
+        slidesPerView: 4,
+        loop: true,
+        autoplay: {
+          delay: 2000,
+        },
+        spaceBetween: 30,
+        breakpoints: {
+          1300: { slidesPerView: 4 },
+          768: { slidesPerView: 2 },
+          0: { slidesPerView: 1 },
+        },
+      });
+
       const Login_Form = document.querySelector(".ModelFrom");
 
       const LoginBtn = document.querySelector("#LoginBtn");
@@ -344,4 +448,3 @@
     </script>
   </body>
 </html>
- 
