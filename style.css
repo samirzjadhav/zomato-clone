@@ -1106,7 +1106,145 @@ footer {
   width: 100% !important;
 }
 
-.Sectionbanner{
+.Sectionbanner {
+  width: 76%;
+  margin: 50px 12%;
+  height: 320px;
+  object-fit: cover;
+  object-position: left;
+  display: inline-block;
+  border-radius: 15px;
+}
+
+.Restaurant_wrapper {
+  flex-direction: column;
+  align-items: flex-start;
+}
+
+.Restaurant_Cards_wrapper {
   width: 100%;
-  height: 100%;
+  display: grid;
+  grid-template-columns: repeat(4, 1fr);
+  gap: 20px;
+}
+
+.Restaurant_Cards_wrapper a {
+  width: 100%;
+}
+
+.Restaurants_product_Item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+  padding: 1rem;
+  position: relative;
+  border-radius: 1.5rem;
+  border: 0.1rem solid rgb(232, 232, 232);
+  transition: var(--transition);
+  gap: 10px;
+}
+
+.Restaurants_product_Item:hover {
+  box-shadow: 0 0 14px rgba(0, 0, 0, 0, 2);
+  border: 0.1rem solid rgba(0, 0, 0, 0.85);
+}
+
+.Restaurants_Product_Image {
+  height: 250px;
+  width: 100%;
+  border-radius: 1.5rem;
+  overflow: hidden;
+  position: relative;
+}
+
+.Restaurants_Product_Image img {
+  object-fit: cover;
+}
+
+.Restaurants_Product_Image p {
+  position: absolute;
+  bottom: 20px;
+  left: 0;
+  max-width: 100%;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+  padding: 0px 0.6rem;
+  font-size: 0.9rem;
+  text-transform: capitalize;
+  margin: 0 0 1rem;
+  color: var(--white-color);
+  background-color: rgb(37, 111, 239);
+  border-radius: 0 0.2rem 0.2rem 0;
+}
+
+.Restaurants_Products_Content {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.Restaurants_Products_Content ul {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  gap: 10px;
+}
+
+.Restaurants_Products_Content ul li h4 {
+  font-size: 1.1rem;
+  font-weight: 500;
+  text-transform: capitalize;
+  color: var(--black-color);
+}
+
+.Restaurants_Products_Content ul:nth-child(1) li:nth-child(2) {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 3px;
+  background-color: rgb(38, 126, 62);
+  color: var(--white-color);
+  padding: 2px 5px;
+  border-radius: 5px;
+  color: var(--white-color);
+}
+
+.Restaurants_Products_Content li span {
+  color: var(--white-color);
+  font-size: 0.8rem;
+  font-weight: 600;
+}
+
+.Restaurants_Products_Content li i {
+  font-size: 0.6rem;
+}
+
+.Restaurants_Products_Content ul li:nth-of-type(1) p {
+  max-width: 80%;
+  overflow: hidden;
+  text-overflow: ellipsis;
+  white-space: nowrap;
+}
+
+.Restaurants_Products_Content li p {
+  font-size: 12px;
+  font-weight: 300;
+  color: rgb(105, 105, 105);
+}
+
+.time {
+  width: 100%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.time p {
+  font-size: 0.9rem;
+  font-weight: 500;
+  color: #363636;
 }

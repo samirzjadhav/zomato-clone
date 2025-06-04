@@ -282,8 +282,11 @@
       </div>
     </section>
 
-    <section>
-      <img src="Image/banner02.png" class="Sectionbanner" alt="banner02" />
+    <img src="Image/banner02.png" class="Sectionbanner" alt="banner02" />
+
+    <section class="Restaurant_wrapper">
+      <h2>Restaurants in Vadodara</h2>
+      <div class="Restaurant_Cards_wrapper"></div>
     </section>
 
     <footer>
@@ -353,6 +356,7 @@
     />
 
     <script src="./script.js"></script>
+    <script src="./Data.js"></script>
     <script>
       var swiper2 = new Swiper(".swiper-rastaurant", {
         slidesPerView: 4,
@@ -367,6 +371,87 @@
           0: { slidesPerView: 1 },
         },
       });
+
+      const restaurantCard_container = document.querySelector(
+        ".Restaurant_Cards_wrapper"
+      );
+      function createRestaurantCard(Restaurant) {
+        Restaurants.forEach((restaurant) => {
+          var a = document.createElement("a");
+          a.href = "#";
+          a.classList.add("restaurant_card_container");
+          a.setAttribute("data-id", restaurant.id);
+
+          var item = document.createElement("div");
+          item.setAttribute("class", "Restaurants_product_Item");
+
+          var imageSection = document.createElement("div");
+          imageSection.setAttribute(
+            "class",
+            "Restaurants_Product_Image Section_Image"
+          );
+
+          var img = document.createElement("img");
+          img.setAttribute("src", restaurant.imageSrc);
+          img.setAttribute("alt", restaurant.imageSrc);
+
+          var offer = document.createElement("p");
+          offer.innerText = restaurant.offerText;
+
+          imageSection.appendChild(img);
+          imageSection.appendChild(offer);
+
+          var contentSection = document.createElement("div");
+          contentSection.setAttribute("class", "Restaurants_Products_Content");
+
+          var list1 = document.createElement("ul");
+          var listItem1 = document.createElement("li");
+          var restaurantTitle = document.createElement("h4");
+          restaurantTitle.innerText = restaurant.RestaurantsName;
+          listItem1.appendChild(restaurantTitle);
+          list1.appendChild(listItem1);
+
+          var listItem2 = document.createElement("li");
+          var ratingSpan = document.createElement("span");
+          ratingSpan.innerText = restaurant.rating;
+          var starIcon = document.createElement("i");
+          starIcon.setAttribute("class", "ri-star-fill");
+          listItem2.appendChild(ratingSpan);
+          listItem2.appendChild(starIcon);
+          list1.appendChild(listItem2);
+
+          var list2 = document.createElement("ul");
+          var listItem3 = document.createElement("li");
+          var categoryParagraph = document.createElement("p");
+          categoryParagraph.innerText = restaurant.category;
+          listItem3.appendChild(categoryParagraph);
+          list2.appendChild(listItem3);
+
+          var listItem4 = document.createElement("li");
+          var priceParagraph = document.createElement("p");
+          priceParagraph.innerText = restaurant.PriceForOne;
+          listItem4.appendChild(priceParagraph);
+          list2.appendChild(listItem4);
+
+          var timeSection = document.createElement("div");
+          timeSection.setAttribute("class", "time");
+          var timeParagraph = document.createElement("p");
+          timeParagraph.innerText = restaurant.deliveryTime;
+          timeSection.appendChild(timeParagraph);
+
+          contentSection.appendChild(list1);
+          contentSection.appendChild(list2);
+          contentSection.appendChild(timeSection);
+
+          item.appendChild(imageSection);
+          item.appendChild(contentSection);
+          a.appendChild(item);
+
+          restaurantCard_container.appendChild(a);
+        });
+      }
+
+      createRestaurantCard(Restaurants);
 
       const Login_Form = document.querySelector(".ModelFrom");
 
