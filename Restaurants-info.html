@@ -1,11 +1,324 @@
 <!DOCTYPE html>
 <html lang="en">
-<head>
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Document</title>
-</head>
-<body>
-    
-</body>
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Remix Icon -->
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
+    />
+    <!-- Swiper SLider Cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <title>Zomato Clone</title>
+  </head>
+  <body>
+    <!-- Header section -->
+    <div class="header_section">
+      <nav>
+        <div class="logo">
+          <a href="index.html">
+            <img
+              src="Image/zomato-logo2.avif"
+              alt="logo"
+              height="40px"
+              width="160px"
+          /></a>
+        </div>
+        <div class="search_wrapper">
+          <div class="search_cate">
+            <div class="search_box">
+              <div class="Search_Content">
+                <div class="">
+                  <svg
+                    xmlns="http://www.w3.org/2000/svg"
+                    fill="#FF7E8B"
+                    width="20"
+                    height="20"
+                    viewBox="0 0 20 20"
+                    aria-labelledby="icon-svg-title- icon-svg-desc-"
+                    role="img"
+                    class="sc-rbbb40-0 iRDDBk"
+                  >
+                    <title>location-fill</title>
+                    <path
+                      d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"
+                    ></path>
+                  </svg>
+                  <a href="">Vadodara</a>
+                </div>
+                <i class="ri-arrow-down-s-fill"></i>
+              </div>
+              <ul class="search_dropdown">
+                <li>
+                  <a href="#">
+                    <svg
+                      xmlns="http://www.w3.org/2000/svg"
+                      fill="#EF4F5F"
+                      width="14"
+                      height="14"
+                      viewBox="0 0 20 20"
+                      aria-labelledby="icon-svg-title- icon-svg-desc-"
+                      role="img"
+                      class="sc-rbbb40-0 kyPUnV"
+                    >
+                      <title>current-location</title>
+                      <path
+                        d="M13.58 10c0 1.977-1.603 3.58-3.58 3.58s-3.58-1.603-3.58-3.58c0-1.977 1.603-3.58 3.58-3.58v0c1.977 0 3.58 1.603 3.58 3.58v0zM20 9.52v0.96c0 0.265-0.215 0.48-0.48 0.48v0h-1.72c-0.447 3.584-3.256 6.393-6.802 6.836l-0.038 0.004v1.72c0 0.265-0.215 0.48-0.48 0.48v0h-0.96c-0.265 0-0.48-0.215-0.48-0.48v0-1.72c-3.575-0.455-6.375-3.262-6.816-6.802l-0.004-0.038h-1.74c-0.265 0-0.48-0.215-0.48-0.48v0-0.96c0-0.265 0.215-0.48 0.48-0.48v0h1.74c0.445-3.578 3.245-6.385 6.781-6.836l0.039-0.004v-1.72c0-0.265 0.215-0.48 0.48-0.48v0h0.96c0.265 0 0.48 0.215 0.48 0.48v0 1.72c3.584 0.447 6.393 3.256 6.836 6.802l0.004 0.038h1.72c0.265 0 0.48 0.215 0.48 0.48v0zM15.96 10c0-3.292-2.668-5.96-5.96-5.96s-5.96 2.668-5.96 5.96c0 3.292 2.668 5.96 5.96 5.96v0c3.292 0 5.96-2.668 5.96-5.96v0z"
+                      ></path>
+                    </svg>
+                    <div class="location_info">
+                      <p>Detect current location</p>
+                      <p>using GPS</p>
+                    </div>
+                  </a>
+                </li>
+              </ul>
+            </div>
+            <div class="input_box">
+              <i class="ri-search-2-line search_wrapper_icon"></i>
+              <input type="text" placeholder="Search For Restaurant" />
+            </div>
+          </div>
+        </div>
+        <div class="Sidebar">
+          <div class="sidebar_menu">
+            <a href="#" id="LoginBtn">Log In</a>
+            <a href="#" id="SignUpBtn">Sign Up</a>
+          </div>
+        </div>
+      </nav>
+    </div>
+
+    <!-- Login Form -->
+    <div class="ModelFrom">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Login</h2>
+          <button class="close-btn">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <select name="" id="">
+              <option value="">+ 91</option>
+              <option value=""><span class="flag-icon">+ 93</span></option>
+            </select>
+            <input
+              type="text"
+              placeholder="Phone"
+              class="phone-input"
+              required
+            />
+          </div>
+          <button class="otp-btn">Send One Time Password</button>
+          <div class="separator"><span>Or</span></div>
+          <button class="email-btn">
+            <span class="icon"><img src="./Image/email.svg" alt="" /></span>
+            Continue with Email
+          </button>
+          <button class="google-btn">
+            <div class="icon"><img src="Image/google.jpg" alt="" /></div>
+            Sign in with Google
+          </button>
+        </div>
+        <div class="modal-footer">
+          <p>
+            New to Zomato ?
+            <a href="#" id="openRegistration">Create Account</a>
+          </p>
+        </div>
+      </div>
+    </div>
+    <!-- Registration Form -->
+    <div class="ModelFrom Registration_form">
+      <div class="modal">
+        <div class="modal-header">
+          <h2>Registration</h2>
+          <button class="close-btn" id="close-btn2">&times;</button>
+        </div>
+        <div class="modal-body">
+          <div class="input-group">
+            <input
+              type="text"
+              placeholder="Full Name"
+              class="phone-input"
+              required
+            />
+          </div>
+          <div class="input-group">
+            <input
+              type="text"
+              placeholder="Email"
+              class="phone-input"
+              required
+            />
+          </div>
+          <button class="otp-btn">Send One Time Password</button>
+          <div class="separator"><span>Or</span></div>
+          <p id="agreement">
+            <input type="checkbox" /> I agree to Zomato's Terms of Service,
+            Policy and Content Policies
+          </p>
+          <div class="google-btn">
+            <div class="icon"><img src="Image/google.jpg" alt="" /></div>
+            Sign in with Google
+          </div>
+          <div class="modal-footer">
+            <p>
+              Already have an account?
+              <a href="#" id="openlogin">Log in</a>
+            </p>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- Fotter -->
+    <footer>
+      <div class="Footer_Wrap">
+        <div class="Footer_Col">
+          <h6>About Zomato</h6>
+          <ul>
+            <li><p>Who We Are</p></li>
+            <li><p>Blog</p></li>
+            <li><p>Work With Us</p></li>
+            <li><p>Investor relations</p></li>
+            <li><p>Investor Relations</p></li>
+            <li><p>report Fraud</p></li>
+            <li><p>Press Kit</p></li>
+            <li><p>Contact us</p></li>
+          </ul>
+        </div>
+        <div class="Footer_Col">
+          <h6>Zomaverse</h6>
+          <ul>
+            <li><p>Zomato</p></li>
+            <li><p>Blinkit</p></li>
+            <li><p>District</p></li>
+            <li><p>Feeding India</p></li>
+            <li><p>Hyperpure</p></li>
+            <li><p>Zomato Live</p></li>
+            <li><p>Zomaland</p></li>
+            <li><p>Weather Union</p></li>
+          </ul>
+        </div>
+        <div class="Footer_Col">
+          <h6>For Restaurants</h6>
+          <ul>
+            <li><p>Partner With Us</p></li>
+            <li><p>Apps For You</p></li>
+          </ul>
+        </div>
+        <div class="Footer_Col">
+          <h6>Social Links</h6>
+          <div class="Footer_Icon">
+            <i class="ri-linkedin-line"></i>
+            <i class="ri-youtube-line"></i>
+            <i class="ri-twitter-x-line"></i>
+            <i class="ri-instagram-line"></i>
+            <i class="ri-facebook-line"></i>
+          </div>
+          <div class="F_Payment">
+            <img src="Image/p1.webp" alt="Payment-image" />
+            <img src="Image/p2.webp" alt="Payment-image" />
+          </div>
+        </div>
+      </div>
+      <div class="Footer_Bottom">
+        <p>
+          By continuing past this page, you agree to our Terms of Serviece,
+          Cookie Policy, Privacy Policy and Content Policies. All trademarks are
+          properties of their respective owners. 2008-2025 &copy; Zomato™ Ltd.
+          All rights reserved.
+        </p>
+      </div>
+    </footer>
+
+    <script src="script.js"></script>
+    <script>
+      const Login_Form = document.querySelector(".ModelFrom");
+
+      const LoginBtn = document.querySelector("#LoginBtn");
+      const LoginBtn2 = document.querySelector("#LoginBtn2");
+      const NavSigninbtn = document.querySelector("#NavSigninbtn");
+      const NavLoginbtn = document.querySelector("#NavLoginbtn");
+      const closebtn = document.querySelector(".modal-header button");
+
+      const Registration_form = document.querySelector(".Registration_form");
+      const close_btn2 = document.querySelector("#SignUpBtn");
+      console.log(close_btn2);
+      const closebtn2 = document.querySelector("#close-btn2");
+      const openlogin = document.querySelector("#openlogin");
+      const openRegistration = document.querySelector("#openRegistration");
+
+      closebtn.addEventListener("click", function () {
+        Login_Form.style.display = "none";
+      });
+
+      LoginBtn.addEventListener("click", function () {
+        Login_Form.style.display = "flex";
+      });
+
+      NavSigninbtn.addEventListener("click", function () {
+        Login_form.style.display = "flex";
+      });
+
+      NavSigninbtn.addEventListener("click", function () {
+        Login_form.style.display = "flex";
+      });
+
+      LoginBtn2.addEventListener("click", function () {
+        Registration_form.style.display = "flex";
+      });
+
+      closebtn2.addEventListener("click", function () {
+        Registration_form.style.display = "none";
+      });
+
+      close_btn2.addEventListener("click", function () {
+        Registration_form.style.display = "flex";
+      });
+
+      NavSigninbtn.addEventListener("click", function () {
+        Registration_form.style.display = "flex";
+      });
+
+      openlogin.addEventListener("click", function () {
+        Registration_form.style.display = "none";
+        Login_form.style.display = "flex";
+      });
+
+      openRegistration.addEventListener("click", function () {
+        Registration_form.style.display = "flex";
+        Login_form.style.display = "none";
+      });
+
+      const nav = document.querySelector("nav");
+      const body = document.querySelector("body");
+      let search_box = document.querySelector(".search_wrapper");
+      let logo = document.querySelector(".logo a");
+      let menu_icons = document.querySelector(".menu li i");
+      let menu_links = document.querySelector(".menu li a");
+
+      window.addEventListener("scroll", () => {
+        if (window.scrollY > 500) {
+          nav.classList.add("sticky_nav");
+          search_box.classList.add("sticky_search_box");
+          logo.classList.add("sticky_menu");
+          menu_links.forEach((links) => {
+            links.classList.add("sticky_menu");
+          });
+        } else {
+          nav.classList.remove("sticky_nav");
+          search_box.classList.remove("sticky_search_box");
+          logo.classList.remove("sticky_menu");
+          menu_links.forEach((links) => {
+            links.classList.remove("sticky_menu");
+          });
+        }
+      });
+    </script>
+  </body>
 </html>
