@@ -453,6 +453,21 @@
 
       createRestaurantCard(Restaurants);
 
+      //   Pass Id to Url
+      document.addEventListener("DOMContentLoaded", () => {
+        const restaurant_card_container = document.querySelectorAll(
+          ".restaurant_card_container"
+        );
+
+        restaurant_card_container.forEach((card) => {
+          card.addEventListener("click", function () {
+            const restaurantId = this.getAttribute("data-id"); // correct usage
+            // Redirect with ID in query string
+            window.location.href = `Restaurants-info.html?Id=${restaurantId}`;
+          });
+        });
+      });
+
       const Login_Form = document.querySelector(".ModelFrom");
 
       const LoginBtn = document.querySelector("#LoginBtn");
