@@ -298,6 +298,25 @@
  <div class="Restaurant_image_gallery"></div>
 
 `;
+
+            const Restaurant_image_gallery = document.querySelector('.Restaurant_image_gallery');
+
+            if (Restaurant_image_gallery && product.Gallery && Array.isArray(product.Gallery)) {
+                product.Gallery.forEach((image, index) => {
+                    console.log(`Image ${index + 1}:`, image.imageSrc); // ✅ Log each image path
+
+                    const img = document.createElement('img');
+                    img.src = image.imageSrc;
+                    img.alt = `Gallery Image ${index + 1}`;
+                    img.loading = 'lazy';
+
+                    Restaurant_image_gallery.appendChild(img);
+                });
+            } else {
+                console.log("Restaurant_image_gallery or product.Gallery is missing.");
+            }
+
+
         }
 
 
