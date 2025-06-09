@@ -297,6 +297,71 @@
 
  <div class="Restaurant_image_gallery"></div>
 
+ <div class="Productitem_container">
+    <ul class='productitem_container_menu'>
+        <li id="orderOnline_tab">
+            <h2> Order Online </h2>  
+        </li>
+        <li id="Reviews_tab">
+            <h2> Reviews </h2>
+        </li>
+        <li id="Photos_tab">
+            <h2> Photos </h2>
+        </li>
+        <li id="Demo_tab">
+            <h2>Book a Table</h2>
+        </li>
+    </ul>
+</div>
+  
+
+<div class="product_container_wrapper" id="orderOnline_Description">
+      <ul class="Product_Container_wrapper_list">
+      
+      </ul>
+   <div class='Product_Container_Content'>
+        <ul class='Product_Container_Menu_Container'>
+        <h4>Personal Slice Pizza.</h4>
+        <h4>Personal Slice Veg Pizza.</h4>
+        <li>
+          <div class="Product_Container_menu_Item">
+            <div class="Product_Container_menu_Image">
+              <img src="Image/Product_Container_menu_Image2.avif" alt="">
+              <img src="Image/veg.jpg" alt="" id="veg_icon">
+            </div>
+            <div class="Product_Container_menu_Content">
+              <h4>Chessy Macaroni (prsonal Giant Slice (22.5 cm))</h4>
+              <span>₹286</span>
+              <p>Panner,Onions,Capsicum, Olives, Baby Corns With Loads of Cheese</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="Product_Container_menu_Item">
+            <div class="Product_Container_menu_Image">
+              <img src="Image/Product_Container_menu_Image3.avif" alt="">
+              <img src="Image/veg.jpg" alt="" id="veg_icon">
+            </div>
+            <div class="Product_Container_menu_Content">
+              <h4>Margherita Pizza (prsonal Giant Slice (22.5 cm))</h4>
+              <div class="Product_Container_menu_Content_Star">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <span>₹286</span>
+              <p>A Classic Cheesy Margherita. Cant go wrong. [fat-14.3 per 100g, protrin-12.6 per 100gm </p>
+            </div>
+          </div>
+        </li>
+        </ul>
+    </div>
+</div>
+
+
+
 `;
 
             const Restaurant_image_gallery = document.querySelector('.Restaurant_image_gallery');
@@ -316,6 +381,17 @@
                 console.log("Restaurant_image_gallery or product.Gallery is missing.");
             }
 
+            const Product_Container_wrapper_list = document.querySelector('.Product_Container_wrapper_list');
+
+            product.mealCategory.forEach(category => {
+                const li = document.createElement('li');
+                const p = document.createElement('p');
+
+                p.textContent = category.categoryName;
+                li.appendChild(p);
+
+                Product_Container_wrapper_list.appendChild(li)
+            })
 
         }
 

@@ -1372,3 +1372,157 @@ footer {
 .Restaurant_image_gallery img:nth-of-type(4) {
   grid-area: 1/5/5/6;
 }
+
+.Productitem_container {
+  flex-direction: column;
+  gap: 20px;
+  width: 100%;
+  margin-top: 40px;
+}
+
+.productitem_container_menu {
+  height: 50px;
+  width: 60%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.productitem_container_menu li {
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  height: 100%;
+  width: 40%;
+  padding: 20px 10px;
+  cursor: pointer;
+  background-color: #f8f9fc;
+}
+
+.productitem_container_menu li:hover {
+  background-color: #1e1e1e;
+}
+
+.productitem_container_menu li h2 {
+  text-transform: capitalize;
+  font-size: 1.2rem;
+  color: rgb(105, 105, 105);
+  font-weight: 400;
+}
+
+.productitem_container_menu li:hover h2 {
+  color: #f8f9fc;
+}
+
+.product_container_wrapper {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  gap: 20px;
+}
+
+.product_container_wrapper li {
+  width: 100%;
+  position: relative;
+}
+
+.product_container_wrapper li p {
+  font-size: 16px;
+  font-weight: 600;
+  color: rgb(255, 123, 123);
+  padding: 8px 20px;
+  background: linear-gradient(270deg, #ffd4d4, transparent);
+  margin: 10px 0;
+  border-right: 5px solid rgb(239, 79, 95);
+}
+
+.Product_Container_Content {
+  width: 80%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: start;
+  flex-direction: column;
+}
+
+.Product_Container_Menu_Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  padding: 30px 0;
+  border-radius: 1px solid rgba(0, 0, 0, 0.1);
+}
+
+.Product_Container_Menu_Container h4 {
+  font-size: 1.5rem;
+  font-weight: 400;
+  text-transform: capitalize;
+  color: var(--black-color);
+  padding-bottom: 10px;
+}
+
+.Product_Container_Menu_Container p {
+  font-size: 1rem;
+  text-transform: uppercase;
+  color: rgb(105, 105, 105);
+  font-weight: 500;
+  letter-spacing: 2px;
+}
+
+.Product_Container_menu_Item {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+  padding-top: 20px;
+}
+
+.Product_Container_menu_Image {
+  min-width: 140px;
+  height: 140px;
+  border-radius: 12px;
+  position: relative;
+  overflow: hidden;
+}
+
+.Product_Container_menu_Image img {
+  width: 100%;
+  height: 100%;
+  object-fit: cover;
+}
+
+#veg_icon {
+  position: absolute;
+  top: 10px;
+  right: 10px;
+  width: 12px;
+  height: 12px;
+}
+
+.Product_Container_menu_Content h4 {
+  font-size: 1.2rem !important;
+  font-weight: 500 !important;
+  padding-bottom: 5px;
+}
+
+.Product_Container_menu_content span {
+  color: var(--black-color);
+  font-size: 0.9rem;
+  font-weight: 30;
+}
+
+.Product_Container_menu_Content p {
+  text-transform: capitalize;
+  font-size: 0.9rem;
+  font-weight: 300;
+  letter-spacing: 0;
+  padding-top: 8px;
+  color: rgb(79, 79, 79);
+}
+
+.Product_Container_menu_Content_Star i {
+  font-size: 1rem;
+  color: rgb(240, 187, 14);
+}
