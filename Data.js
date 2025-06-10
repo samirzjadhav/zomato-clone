@@ -17,10 +17,10 @@ Restaurants = [
     PriceForOne: "₹300 for one",
     deliveryTime: "30 min",
     Gallery: [
-      { imageScr: "Image/la-Phinoz-pizza-image-01.avif" },
-      { imageScr: "Image/la-Phinoz-pizza-image-02.avif" },
-      { imageScr: "Image/la-Phinoz-pizza-image-03.avif" },
-      { imageScr: "Image/la-Phinoz-pizza-image-04.avif" },
+      { imageSrc: "Image/la-Phinoz-pizza-image-01.avif" },
+      { imageSrc: "Image/la-Phinoz-pizza-image-02.avif" },
+      { imageSrc: "Image/la-Phinoz-pizza-image-03.avif" },
+      { imageSrc: "Image/la-Phinoz-pizza-image-04.avif" },
     ],
 
     mealCategory: [
@@ -122,10 +122,10 @@ Restaurants = [
     PriceForOne: "₹200 for one",
     deliveryTime: "$40 min",
     Gallery: [
-      { imageScr: "Image/Space-Villa_image01.avif" },
-      { imageScr: "Image/Space-Villa_image02.avif" },
-      { imageScr: "Image/Space-Villa_image03.avif" },
-      { imageScr: "Image/Space-Villa_image04.avif" },
+      { imageSrc: "Image/Space-Villa_image01.avif" },
+      { imageSrc: "Image/Space-Villa_image02.avif" },
+      { imageSrc: "Image/Space-Villa_image03.avif" },
+      { imageSrc: "Image/Space-Villa_image04.avif" },
     ],
 
     mealCategory: [
@@ -217,10 +217,10 @@ Restaurants = [
     PriceForOne: "₹150 for one",
     deliveryTime: "$20 min",
     Gallery: [
-      { imageScr: "Image/radhe-dhokla-image-01.avif" },
-      { imageScr: "Image/radhe-dhokla-image-02.avif" },
-      { imageScr: "Image/radhe-dhokla-image-03.avif" },
-      { imageScr: "Image/radhe-dhokla-image-04.avif" },
+      { imageSrc: "Image/radhe-dhokla-image-01.avif" },
+      { imageSrc: "Image/radhe-dhokla-image-02.avif" },
+      { imageSrc: "Image/radhe-dhokla-image-03.avif" },
+      { imageSrc: "Image/radhe-dhokla-image-04.avif" },
     ],
 
     mealCategory: [
@@ -311,10 +311,10 @@ Restaurants = [
     PriceForOne: "₹250 for one",
     deliveryTime: "30 min",
     Gallery: [
-      { imageScr: "Image/mac-do-image01.avif" },
-      { imageScr: "Image/mac-do-image02.avif" },
-      { imageScr: "Image/mac-do-image03.avif" },
-      { imageScr: "Image/mac-do-image04.avif" },
+      { imageSrc: "Image/mac-do-image01.avif" },
+      { imageSrc: "Image/mac-do-image02.avif" },
+      { imageSrc: "Image/mac-do-image03.avif" },
+      { imageSrc: "Image/mac-do-image04.avif" },
     ],
 
     mealCategory: [
@@ -382,10 +382,10 @@ Restaurants = [
     PriceForOne: "₹210 for one",
     deliveryTime: "20 min",
     Gallery: [
-      { imageScr: "Image/Jalaram-restu-image.avif" },
-      { imageScr: "Image/Jalaram-restu-image01.jpg" },
-      { imageScr: "Image/Jalaram-restu-image01.jpg" },
-      { imageScr: "Image/Jalaram-restu-image01.jpg" },
+      { imageSrc: "Image/Jalaram-restu-image.avif" },
+      { imageSrc: "Image/Jalaram-restu-image01.jpg" },
+      { imageSrc: "Image/Jalaram-restu-image01.jpg" },
+      { imageSrc: "Image/Jalaram-restu-image01.jpg" },
     ],
 
     mealCategory: [
@@ -437,10 +437,10 @@ Restaurants = [
     PriceForOne: "₹210 for one",
     deliveryTime: "10 min",
     Gallery: [
-      { imageScr: "Image/ajay-food-image01.webp" },
-      { imageScr: "Image/ajay-food-image02.avif" },
-      { imageScr: "Image/ajay-food-image03.avif" },
-      { imageScr: "Image/ajay-food-image04.avif" },
+      { imageSrc: "Image/ajay-food-image01.webp" },
+      { imageSrc: "Image/ajay-food-image02.avif" },
+      { imageSrc: "Image/ajay-food-image03.avif" },
+      { imageSrc: "Image/ajay-food-image04.avif" },
     ],
 
     mealCategory: [

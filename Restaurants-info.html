@@ -297,7 +297,155 @@
 
  <div class="Restaurant_image_gallery"></div>
 
+ <div class="Productitem_container">
+    <ul class='productitem_container_menu'>
+        <li id="orderOnline_tab">
+            <h2> Order Online </h2>  
+        </li>
+        <li id="Reviews_tab">
+            <h2> Reviews </h2>
+        </li>
+        <li id="Photos_tab">
+            <h2> Photos </h2>
+        </li>
+        <li id="Demo_tab">
+            <h2>Book a Table</h2>
+        </li>
+    </ul>
+</div>
+  
+
+<div class="product_container_wrapper" id="orderOnline_Description">
+      <ul class="Product_Container_wrapper_list">
+      
+      </ul>
+   <div class='Product_Container_Content'>
+        <ul class='Product_Container_Menu_Container'>
+        <h4>Personal Slice Pizza.</h4>
+        <h4>Personal Slice Veg Pizza.</h4>
+        <li>
+          <div class="Product_Container_menu_Item">
+            <div class="Product_Container_menu_Image">
+              <img src="Image/Product_Container_menu_Image2.avif" alt="">
+              <img src="Image/veg.jpg" alt="" id="veg_icon">
+            </div>
+            <div class="Product_Container_menu_Content">
+              <h4>Chessy Macaroni (prsonal Giant Slice (22.5 cm))</h4>
+              <span>₹286</span>
+              <p>Panner,Onions,Capsicum, Olives, Baby Corns With Loads of Cheese</p>
+            </div>
+          </div>
+        </li>
+        <li>
+          <div class="Product_Container_menu_Item">
+            <div class="Product_Container_menu_Image">
+              <img src="Image/Product_Container_menu_Image3.avif" alt="">
+              <img src="Image/veg.jpg" alt="" id="veg_icon">
+            </div>
+            <div class="Product_Container_menu_Content">
+              <h4>Margherita Pizza (prsonal Giant Slice (22.5 cm))</h4>
+              <div class="Product_Container_menu_Content_Star">
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+                <i class="ri-star-fill"></i>
+              </div>
+              <span>₹286</span>
+              <p>A Classic Cheesy Margherita. Cant go wrong. [fat-14.3 per 100g, protrin-12.6 per 100gm </p>
+            </div>
+          </div>
+        </li>
+        </ul>
+    </div>
+</div>
+  <div class="Review_Container" id="Review_Description">
+      <div class="Reviews_Top">
+        <div class="Reviews_Box_left">
+          <h2>La Pino's Pizza Reviews</h2>
+          <div class="Reviews_Box">
+            <div class="Reviews_Box_title">
+              <a href="#" class="hero_cate_link">All Reviews</a>
+              <i class="ri-arrow-down-s-fill"></i>
+            </div>
+            <ul class="Reviews_Box_dropdown">
+              <li>
+                <a href="#">All Reviews</a>
+              </li>
+              <li>
+                <a href="#">Following</a>
+              </li>
+              <li>
+                <a href="#">Popular</a>
+              </li>
+              <li>
+                <a href="#">Bloggers</a>
+              </li>
+              <li>
+                <a href="#">My Reviews</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+        <div class="Reviews_Box_right">
+          <div class="Reviews_Box">
+            <div class="Reviews_Box_title">
+              <div>
+              <img src="./Image/menubar.png" alt="">
+              <a href="#">Newest First</a>
+              </div>
+              <i class="ri-arrow-down-s-fill"></i>
+            </div>
+            <ul class="Reviews_Box_dropdown">
+              <li>
+                <a href="#">Newest First</a>
+              </li>
+              <li>
+                <a href="#">Oldest First</a>
+              </li>
+              <li>
+                <a href="#">Highest Rated</a>
+              </li>
+              <li>
+                <a href="#">Lowest Rated</a>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
 `;
+
+            const Restaurant_image_gallery = document.querySelector('.Restaurant_image_gallery');
+
+            if (Restaurant_image_gallery && product.Gallery && Array.isArray(product.Gallery)) {
+                product.Gallery.forEach((image, index) => {
+                    console.log(`Image ${index + 1}:`, image.imageSrc); // ✅ Log each image path
+
+                    const img = document.createElement('img');
+                    img.src = image.imageSrc;
+                    img.alt = `Gallery Image ${index + 1}`;
+                    img.loading = 'lazy';
+
+                    Restaurant_image_gallery.appendChild(img);
+                });
+            } else {
+                console.log("Restaurant_image_gallery or product.Gallery is missing.");
+            }
+
+            const Product_Container_wrapper_list = document.querySelector('.Product_Container_wrapper_list');
+
+            product.mealCategory.forEach(category => {
+                const li = document.createElement('li');
+                const p = document.createElement('p');
+
+                p.textContent = category.categoryName;
+                li.appendChild(p);
+
+                Product_Container_wrapper_list.appendChild(li)
+            })
+
         }
 
 
