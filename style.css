@@ -1526,3 +1526,127 @@ footer {
   font-size: 1rem;
   color: rgb(240, 187, 14);
 }
+
+.Review_Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Reviews_Top {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin: 30px 0;
+}
+
+.Reviews_Box_left,
+.Reviews_Box_right {
+  width: 50%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+}
+
+.Reviews_Box_right {
+  align-items: flex-end;
+  justify-content: flex-end;
+}
+
+.Reviews_Box {
+  width: 40%;
+  border-radius: 0;
+  display: flex;
+  align-items: center;
+  padding: 10px;
+  padding-left: 0;
+  gap: 5px;
+  position: relative;
+}
+
+.Reviews_Box a,
+.Reviews_Box i {
+  color: #363636;
+  font-size: 300;
+  font-size: 1.2rem;
+}
+
+.Reviews_Box_title {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+.Reviews_Box_title i {
+  font-size: 1.5rem;
+  transition: var(--transition);
+}
+
+.Reviews_Box:hover .Reviews_Box_title i {
+  transform: rotate(180deg);
+}
+
+.Reviews_Box_dropdown {
+  position: absolute;
+  top: 100%;
+  left: 0;
+  height: 0;
+  width: 150px;
+  overflow: hidden;
+  border-radius: 5px;
+  display: flex;
+  box-shadow: rgba(28, 28, 28, 0.15) 0 1px 8px;
+  background-color: var(--white-color);
+  align-items: flex-start;
+  flex-direction: column;
+  transition: var(--transition);
+}
+
+.Reviews_Box:hover .Reviews_Box_dropdown {
+  top: 105%;
+  opacity: 1 !important;
+  height: 280px;
+}
+
+.Review_Box_dropdown li {
+  width: 100%;
+  position: relative;
+}
+
+.Reviews_Box_dropdown li a {
+  width: 100%;
+  padding: 0.9rem;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  gap: 20px;
+}
+
+.Reviews_Box_dropdown li:nth-child(1) {
+  background-color: rgb(233, 242, 252);
+}
+
+.Reviews_Box_droupdown li:hover {
+  background-color: rgb(248, 248, 248);
+}
+
+.Reviews_Top h2 {
+  font-size: 1.6rem;
+  font-weight: 400;
+}
+
+.Reviews_Box_title div {
+  display: flex;
+  align-items: center;
+  gap: 8px;
+}
+
+.Reviews_Box_Right .Reviews_Box_dropdown {
+  width: 100%;
+}
+
+.Reviews_Box_right .Reviews_Box:hover .Reviews_Box_dropdown {
+  height: 230px;
+}
