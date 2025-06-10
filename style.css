@@ -1650,3 +1650,136 @@ footer {
 .Reviews_Box_right .Reviews_Box:hover .Reviews_Box_dropdown {
   height: 230px;
 }
+
+.Reviews_Wrap {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+
+.Reviews_Item {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-start;
+  gap: 30px;
+  padding: 30px 0;
+  border-bottom: 1px solid rgb(232, 232, 232);
+}
+
+.Reviews_left {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: start;
+  gap: 10px;
+}
+
+.Reviews_left ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+}
+
+.Reviews_left ul li h6 {
+  font-size: 1.1rem;
+  color: var(--black-color);
+  font-weight: 500;
+}
+
+.Reviews_left ul li span {
+  color: #696969;
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+.Reviews_Icons li img,
+.Reviews_Icons li svg {
+  width: 16px;
+  height: 16px;
+}
+
+.Reviews_Icons li {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  gap: 10px;
+}
+
+.Reviews_left ul:nth-child(1) li span:nth-child(2) {
+  padding-left: 18px;
+  position: relative;
+}
+
+.Reviews_left ul:nth-child(1) li span:nth-child(2)::after {
+  content: "";
+  position: absolute;
+  left: 3px;
+  top: 7px;
+  width: 6px;
+  height: 6px;
+  border-radius: 50%;
+  background-color: #696969;
+}
+
+.Reviews_left ul:nth-child(2) li:nth-child(1) {
+  display: flex;
+  align-items: center;
+  gap: 4px;
+  background-color: rgb(14, 80, 32);
+  color: var(--white-color);
+  padding: 1px 5px;
+  border-radius: 5px;
+}
+
+.Reviews_left ul:nth-child(2) li:nth-child(1) span {
+  color: var(--white-color);
+  font-size: 0.8rem;
+}
+
+.Reviews_left ul:nth-child(2) li:nth-child(1) i {
+  font-size: 0.7rem;
+}
+
+.Reviews_left p {
+  color: #9c9c9c !important;
+  font-size: 0.9rem;
+  font-weight: 300;
+}
+
+.Reviews_text {
+  color: #696969 !important;
+}
+
+.Reviews_Icons {
+  gap: 30px !important;
+}
+
+.Review_Icons li span {
+  font-size: 1rem;
+  font-weight: 300;
+}
+
+.Reviews_right {
+  width: 20%;
+  display: flex;
+  justify-content: flex-end;
+  align-items: center;
+}
+
+.Reviews_right button {
+  background-color: transparent;
+  height: 45px;
+  width: 90px;
+  border-radius: 8px;
+  cursor: pointer;
+  border: 1px solid var(--prim-color);
+  color: var(--prim-color);
+}
+
+.Rate {
+  background-color: var(--prim-color) !important ;
+}
