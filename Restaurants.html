@@ -1,554 +1,537 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="style.css" />
-    <!-- Remix Icon -->
-    <link
-      rel="stylesheet"
-      href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css"
-    />
-    <!-- Swiper SLider Cdn -->
-    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
 
-    <title>Zomato Clone</title>
-  </head>
-  <body>
-    <!-- Header section -->
-    <div class="header_section">
-      <nav>
-        <div class="logo">
-          <a href="index.html">
-            <img
-              src="Image/zomato-logo2.avif"
-              alt="logo"
-              height="40px"
-              width="160px"
-          /></a>
-        </div>
-        <div class="search_wrapper">
-          <div class="search_cate">
-            <div class="search_box">
-              <div class="Search_Content">
-                <div class="">
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="#FF7E8B"
-                    width="20"
-                    height="20"
-                    viewBox="0 0 20 20"
-                    aria-labelledby="icon-svg-title- icon-svg-desc-"
-                    role="img"
-                    class="sc-rbbb40-0 iRDDBk"
-                  >
-                    <title>location-fill</title>
-                    <path
-                      d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z"
-                    ></path>
-                  </svg>
-                  <a href="">Vadodara</a>
-                </div>
-                <i class="ri-arrow-down-s-fill"></i>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="style.css" />
+  <!-- Remix Icon -->
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+  <!-- Swiper SLider Cdn -->
+  <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+  <title>Zomato Clone</title>
+</head>
+
+<body>
+  <!-- Header section -->
+  <div class="header_section">
+    <nav>
+      <div class="logo">
+        <a href="index.html">
+          <img src="Image/zomato-logo2.avif" alt="logo" height="40px" width="160px" /></a>
+      </div>
+      <div class="search_wrapper">
+        <div class="search_cate">
+          <div class="search_box">
+            <div class="Search_Content">
+              <div class="">
+                <svg xmlns="http://www.w3.org/2000/svg" fill="#FF7E8B" width="20" height="20" viewBox="0 0 20 20"
+                  aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 iRDDBk">
+                  <title>location-fill</title>
+                  <path
+                    d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z">
+                  </path>
+                </svg>
+                <a href="">Vadodara</a>
               </div>
-              <ul class="search_dropdown">
-                <li>
-                  <a href="#">
-                    <svg
-                      xmlns="http://www.w3.org/2000/svg"
-                      fill="#EF4F5F"
-                      width="14"
-                      height="14"
-                      viewBox="0 0 20 20"
-                      aria-labelledby="icon-svg-title- icon-svg-desc-"
-                      role="img"
-                      class="sc-rbbb40-0 kyPUnV"
-                    >
-                      <title>current-location</title>
-                      <path
-                        d="M13.58 10c0 1.977-1.603 3.58-3.58 3.58s-3.58-1.603-3.58-3.58c0-1.977 1.603-3.58 3.58-3.58v0c1.977 0 3.58 1.603 3.58 3.58v0zM20 9.52v0.96c0 0.265-0.215 0.48-0.48 0.48v0h-1.72c-0.447 3.584-3.256 6.393-6.802 6.836l-0.038 0.004v1.72c0 0.265-0.215 0.48-0.48 0.48v0h-0.96c-0.265 0-0.48-0.215-0.48-0.48v0-1.72c-3.575-0.455-6.375-3.262-6.816-6.802l-0.004-0.038h-1.74c-0.265 0-0.48-0.215-0.48-0.48v0-0.96c0-0.265 0.215-0.48 0.48-0.48v0h1.74c0.445-3.578 3.245-6.385 6.781-6.836l0.039-0.004v-1.72c0-0.265 0.215-0.48 0.48-0.48v0h0.96c0.265 0 0.48 0.215 0.48 0.48v0 1.72c3.584 0.447 6.393 3.256 6.836 6.802l0.004 0.038h1.72c0.265 0 0.48 0.215 0.48 0.48v0zM15.96 10c0-3.292-2.668-5.96-5.96-5.96s-5.96 2.668-5.96 5.96c0 3.292 2.668 5.96 5.96 5.96v0c3.292 0 5.96-2.668 5.96-5.96v0z"
-                      ></path>
-                    </svg>
-                    <div class="location_info">
-                      <p>Detect current location</p>
-                      <p>using GPS</p>
-                    </div>
-                  </a>
-                </li>
-              </ul>
+              <i class="ri-arrow-down-s-fill"></i>
             </div>
-            <div class="input_box">
-              <i class="ri-search-2-line search_wrapper_icon"></i>
-              <input type="text" placeholder="Search For Restaurant" />
-            </div>
+            <ul class="search_dropdown">
+              <li>
+                <a href="#">
+                  <svg xmlns="http://www.w3.org/2000/svg" fill="#EF4F5F" width="14" height="14" viewBox="0 0 20 20"
+                    aria-labelledby="icon-svg-title- icon-svg-desc-" role="img" class="sc-rbbb40-0 kyPUnV">
+                    <title>current-location</title>
+                    <path
+                      d="M13.58 10c0 1.977-1.603 3.58-3.58 3.58s-3.58-1.603-3.58-3.58c0-1.977 1.603-3.58 3.58-3.58v0c1.977 0 3.58 1.603 3.58 3.58v0zM20 9.52v0.96c0 0.265-0.215 0.48-0.48 0.48v0h-1.72c-0.447 3.584-3.256 6.393-6.802 6.836l-0.038 0.004v1.72c0 0.265-0.215 0.48-0.48 0.48v0h-0.96c-0.265 0-0.48-0.215-0.48-0.48v0-1.72c-3.575-0.455-6.375-3.262-6.816-6.802l-0.004-0.038h-1.74c-0.265 0-0.48-0.215-0.48-0.48v0-0.96c0-0.265 0.215-0.48 0.48-0.48v0h1.74c0.445-3.578 3.245-6.385 6.781-6.836l0.039-0.004v-1.72c0-0.265 0.215-0.48 0.48-0.48v0h0.96c0.265 0 0.48 0.215 0.48 0.48v0 1.72c3.584 0.447 6.393 3.256 6.836 6.802l0.004 0.038h1.72c0.265 0 0.48 0.215 0.48 0.48v0zM15.96 10c0-3.292-2.668-5.96-5.96-5.96s-5.96 2.668-5.96 5.96c0 3.292 2.668 5.96 5.96 5.96v0c3.292 0 5.96-2.668 5.96-5.96v0z">
+                    </path>
+                  </svg>
+                  <div class="location_info">
+                    <p>Detect current location</p>
+                    <p>using GPS</p>
+                  </div>
+                </a>
+              </li>
+            </ul>
+          </div>
+          <div class="input_box">
+            <i class="ri-search-2-line search_wrapper_icon"></i>
+            <input type="text" placeholder="Search For Restaurant" />
           </div>
         </div>
-        <div class="Sidebar">
-          <div class="sidebar_menu">
-            <a href="#" id="LoginBtn">Log In</a>
-            <a href="#" id="SignUpBtn">Sign Up</a>
-          </div>
+      </div>
+      <div class="Sidebar">
+        <div class="sidebar_menu">
+          <a href="#" id="LoginBtn">Log In</a>
+          <a href="#" id="SignUpBtn">Sign Up</a>
         </div>
-      </nav>
-    </div>
+      </div>
+    </nav>
+  </div>
 
-    <!-- Login Form -->
-    <div class="ModelFrom">
-      <div class="modal">
-        <div class="modal-header">
-          <h2>Login</h2>
-          <button class="close-btn">&times;</button>
+  <!-- Login Form -->
+  <div class="ModelFrom">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Login</h2>
+        <button class="close-btn">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <select name="" id="">
+            <option value="">+ 91</option>
+            <option value=""><span class="flag-icon">+ 93</span></option>
+          </select>
+          <input type="text" placeholder="Phone" class="phone-input" required />
         </div>
-        <div class="modal-body">
-          <div class="input-group">
-            <select name="" id="">
-              <option value="">+ 91</option>
-              <option value=""><span class="flag-icon">+ 93</span></option>
-            </select>
-            <input
-              type="text"
-              placeholder="Phone"
-              class="phone-input"
-              required
-            />
-          </div>
-          <button class="otp-btn">Send One Time Password</button>
-          <div class="separator"><span>Or</span></div>
-          <button class="email-btn">
-            <span class="icon"><img src="./Image/email.svg" alt="" /></span>
-            Continue with Email
-          </button>
-          <button class="google-btn">
-            <div class="icon"><img src="Image/google.jpg" alt="" /></div>
-            Sign in with Google
-          </button>
+        <button class="otp-btn">Send One Time Password</button>
+        <div class="separator"><span>Or</span></div>
+        <button class="email-btn">
+          <span class="icon"><img src="./Image/email.svg" alt="" /></span>
+          Continue with Email
+        </button>
+        <button class="google-btn">
+          <div class="icon"><img src="Image/google.jpg" alt="" /></div>
+          Sign in with Google
+        </button>
+      </div>
+      <div class="modal-footer">
+        <p>
+          New to Zomato ?
+          <a href="#" id="openRegistration">Create Account</a>
+        </p>
+      </div>
+    </div>
+  </div>
+  <!-- Registration Form -->
+  <div class="ModelFrom Registration_form">
+    <div class="modal">
+      <div class="modal-header">
+        <h2>Registration</h2>
+        <button class="close-btn" id="close-btn2">&times;</button>
+      </div>
+      <div class="modal-body">
+        <div class="input-group">
+          <input type="text" placeholder="Full Name" class="phone-input" required />
+        </div>
+        <div class="input-group">
+          <input type="text" placeholder="Email" class="phone-input" required />
+        </div>
+        <button class="otp-btn">Send One Time Password</button>
+        <div class="separator"><span>Or</span></div>
+        <p id="agreement">
+          <input type="checkbox" /> I agree to Zomato's Terms of Service,
+          Policy and Content Policies
+        </p>
+        <div class="google-btn">
+          <div class="icon"><img src="Image/google.jpg" alt="" /></div>
+          Sign in with Google
         </div>
         <div class="modal-footer">
           <p>
-            New to Zomato ?
-            <a href="#" id="openRegistration">Create Account</a>
+            Already have an account?
+            <a href="#" id="openlogin">Log in</a>
           </p>
         </div>
       </div>
     </div>
-    <!-- Registration Form -->
-    <div class="ModelFrom Registration_form">
-      <div class="modal">
-        <div class="modal-header">
-          <h2>Registration</h2>
-          <button class="close-btn" id="close-btn2">&times;</button>
+  </div>
+
+  <div class="Tab_Category">
+    <p><a href="index.html">Home</a> / <span>Restaurant</span></p>
+    <div class="Tabs_Restaurant" id="DiningOut_Tab">
+      <div class="Tab_Restaurant">
+        <div>
+          <img src="Image/DiningOut_img.avif" alt="icon-dining-out" />
         </div>
-        <div class="modal-body">
-          <div class="input-group">
-            <input
-              type="text"
-              placeholder="Full Name"
-              class="phone-input"
-              required
-            />
+        <span>Dining Out</span>
+      </div>
+      <div class="Tab_Restaurant" id="delivery_Tab">
+        <div>
+          <img src="Image/Delivery_img.webp" alt="delivery" />
+        </div>
+        <span>Delivery</span>
+      </div>
+    </div>
+  </div>
+
+  <section class="Collections bg_section">
+    <div class="Collections_title">
+      <div class="Collections_info">
+        <h2>Collections</h2>
+        <h5>
+          Explore Curated lists of top restaurants, cafes, pubs, and bars in
+          Vadodara, based on trends
+        </h5>
+      </div>
+      <span id="LoginBtn2">
+        All Collections in Vadodara <i class="ri-arrow-right-s-fill"></i>
+      </span>
+    </div>
+    <div class="swiper swiper-rastaurant">
+      <div class="swiper-wrapper">
+        <div class="swiper-slide">
+          <div class="Collections_Item">
+            <div class="Collections_Image Section_Image">
+              <img src="Image/Collections1.avif" alt="Collections_Items_image" />
+            </div>
+            <div class="Collection_Content">
+              <p>10 Gourmet Pizza Places</p>
+              <h6>9 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
           </div>
-          <div class="input-group">
-            <input
-              type="text"
-              placeholder="Email"
-              class="phone-input"
-              required
-            />
+        </div>
+        <div class="swiper-slide">
+          <div class="Collections_Item">
+            <div class="Collections_Image Section_Image">
+              <img src="Image/Collections2.avif" alt="Collections_Items_image" />
+            </div>
+            <div class="Collection_Content">
+              <p>Great Cafes</p>
+              <h6>9 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
           </div>
-          <button class="otp-btn">Send One Time Password</button>
-          <div class="separator"><span>Or</span></div>
-          <p id="agreement">
-            <input type="checkbox" /> I agree to Zomato's Terms of Service,
-            Policy and Content Policies
-          </p>
-          <div class="google-btn">
-            <div class="icon"><img src="Image/google.jpg" alt="" /></div>
-            Sign in with Google
+        </div>
+        <div class="swiper-slide">
+          <div class="Collections_Item">
+            <div class="Collections_Image Section_Image">
+              <img src="Image/Collections5.png" alt="Collections_Items_image" />
+            </div>
+            <div class="Collection_Content">
+              <p>Serene Rooftop Places</p>
+              <h6>5 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
           </div>
-          <div class="modal-footer">
-            <p>
-              Already have an account?
-              <a href="#" id="openlogin">Log in</a>
-            </p>
+        </div>
+        <div class="swiper-slide">
+          <div class="Collections_Item">
+            <div class="Collections_Image Section_Image">
+              <img src="Image/Collections6.png" alt="Collections_Items_image" />
+            </div>
+            <div class="Collection_Content">
+              <p>Local Favorite Places</p>
+              <h6>8 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
+          </div>
+        </div>
+        <div class="swiper-slide">
+          <div class="Collections_Item">
+            <div class="Collections_Image Section_Image">
+              <img src="Image/Collections7.png" alt="Collections_Items_image" />
+            </div>
+            <div class="Collection_Content">
+              <p>13 Unmissable Gujarati Delicacies</p>
+              <h6>11 Places <i class="ri-arrow-right-s-fill"></i></h6>
+            </div>
           </div>
         </div>
       </div>
     </div>
+  </section>
 
-    <div class="Tab_Category">
-      <p><a href="index.html">Home</a> / <span>Restaurant</span></p>
-      <div class="Tabs_Restaurant" id="DiningOut_Tab">
-        <div class="Tab_Restaurant">
-          <div>
-            <img src="Image/DiningOut_img.avif" alt="icon-dining-out" />
-          </div>
-          <span>Dining Out</span>
+  <img src="Image/banner02.png" class="Sectionbanner" alt="banner02" />
+
+  <section class="Restaurant_wrapper">
+    <h2>Restaurants in Vadodara</h2>
+    <div class="Restaurant_Cards_wrapper"></div>
+  </section>
+
+  <footer>
+    <div class="Footer_Wrap">
+      <div class="Footer_Col">
+        <h6>About Zomato</h6>
+        <ul>
+          <li>
+            <p>Who We Are</p>
+          </li>
+          <li>
+            <p>Blog</p>
+          </li>
+          <li>
+            <p>Work With Us</p>
+          </li>
+          <li>
+            <p>Investor relations</p>
+          </li>
+          <li>
+            <p>Investor Relations</p>
+          </li>
+          <li>
+            <p>report Fraud</p>
+          </li>
+          <li>
+            <p>Press Kit</p>
+          </li>
+          <li>
+            <p>Contact us</p>
+          </li>
+        </ul>
+      </div>
+      <div class="Footer_Col">
+        <h6>Zomaverse</h6>
+        <ul>
+          <li>
+            <p>Zomato</p>
+          </li>
+          <li>
+            <p>Blinkit</p>
+          </li>
+          <li>
+            <p>District</p>
+          </li>
+          <li>
+            <p>Feeding India</p>
+          </li>
+          <li>
+            <p>Hyperpure</p>
+          </li>
+          <li>
+            <p>Zomato Live</p>
+          </li>
+          <li>
+            <p>Zomaland</p>
+          </li>
+          <li>
+            <p>Weather Union</p>
+          </li>
+        </ul>
+      </div>
+      <div class="Footer_Col">
+        <h6>For Restaurants</h6>
+        <ul>
+          <li>
+            <p>Partner With Us</p>
+          </li>
+          <li>
+            <p>Apps For You</p>
+          </li>
+        </ul>
+      </div>
+      <div class="Footer_Col">
+        <h6>Social Links</h6>
+        <div class="Footer_Icon">
+          <i class="ri-linkedin-line"></i>
+          <i class="ri-youtube-line"></i>
+          <i class="ri-twitter-x-line"></i>
+          <i class="ri-instagram-line"></i>
+          <i class="ri-facebook-line"></i>
         </div>
-        <div class="Tab_Restaurant" id="delivery_Tab">
-          <div>
-            <img src="Image/Delivery_img.webp" alt="delivery" />
-          </div>
-          <span>Delivery</span>
+        <div class="F_Payment">
+          <img src="Image/p1.webp" alt="Payment-image" />
+          <img src="Image/p2.webp" alt="Payment-image" />
         </div>
       </div>
-    </div>      
+    </div>
+    <div class="Footer_Bottom">
+      <p>
+        By continuing past this page, you agree to our Terms of Serviece,
+        Cookie Policy, Privacy Policy and Content Policies. All trademarks are
+        properties of their respective owners. 2008-2025 &copy; Zomato™ Ltd.
+        All rights reserved.
+      </p>
+    </div>
+  </footer>
 
-    <section class="Collections bg_section">
-      <div class="Collections_title">
-        <div class="Collections_info">
-          <h2>Collections</h2>
-          <h5>
-            Explore Curated lists of top restaurants, cafes, pubs, and bars in
-            Vadodara, based on trends
-          </h5>
-        </div>
-        <span id="LoginBtn2">
-          All Collections in Vadodara <i class="ri-arrow-right-s-fill"></i>
-        </span>
-      </div>
-      <div class="swiper swiper-rastaurant">
-        <div class="swiper-wrapper">
-          <div class="swiper-slide">
-            <div class="Collections_Item">
-              <div class="Collections_Image Section_Image">
-                <img
-                  src="Image/Collections1.avif"
-                  alt="Collections_Items_image"
-                />
-              </div>
-              <div class="Collection_Content">
-                <p>10 Gourmet Pizza Places</p>
-                <h6>9 Places <i class="ri-arrow-right-s-fill"></i></h6>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="Collections_Item">
-              <div class="Collections_Image Section_Image">
-                <img
-                  src="Image/Collections2.avif"
-                  alt="Collections_Items_image"
-                />
-              </div>
-              <div class="Collection_Content">
-                <p>Great Cafes</p>
-                <h6>9 Places <i class="ri-arrow-right-s-fill"></i></h6>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="Collections_Item">
-              <div class="Collections_Image Section_Image">
-                <img
-                  src="Image/Collections5.png"
-                  alt="Collections_Items_image"
-                />
-              </div>
-              <div class="Collection_Content">
-                <p>Serene Rooftop Places</p>
-                <h6>5 Places <i class="ri-arrow-right-s-fill"></i></h6>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="Collections_Item">
-              <div class="Collections_Image Section_Image">
-                <img
-                  src="Image/Collections6.png"
-                  alt="Collections_Items_image"
-                />
-              </div>
-              <div class="Collection_Content">
-                <p>Local Favorite Places</p>
-                <h6>8 Places <i class="ri-arrow-right-s-fill"></i></h6>
-              </div>
-            </div>
-          </div>
-          <div class="swiper-slide">
-            <div class="Collections_Item">
-              <div class="Collections_Image Section_Image">
-                <img
-                  src="Image/Collections7.png"
-                  alt="Collections_Items_image"
-                />
-              </div>
-              <div class="Collection_Content">
-                <p>13 Unmissable Gujarati Delicacies</p>
-                <h6>11 Places <i class="ri-arrow-right-s-fill"></i></h6>
-              </div>
-            </div>
-          </div>
-        </div>
-      </div>
-    </section>
+  <!-- Swiper Slider Cdn -->
+  <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
 
-    <img src="Image/banner02.png" class="Sectionbanner" alt="banner02" />
+  <script src="./script.js"></script>
+  <script src="./Data.js"></script>
+  <script>
+    var swiper2 = new Swiper(".swiper-rastaurant", {
+      slidesPerView: 4,
+      loop: true,
+      autoplay: {
+        delay: 2000,
+      },
+      spaceBetween: 30,
+      breakpoints: {
+        1300: { slidesPerView: 4 },
+        768: { slidesPerView: 2 },
+        0: { slidesPerView: 1 },
+      },
+    });
 
-    <section class="Restaurant_wrapper">
-      <h2>Restaurants in Vadodara</h2>
-      <div class="Restaurant_Cards_wrapper"></div>
-    </section>
+    const restaurantCard_container = document.querySelector(
+      ".Restaurant_Cards_wrapper"
+    );
+    function createRestaurantCard(Restaurant) {
+      Restaurants.forEach((restaurant) => {
+        var a = document.createElement("a");
+        a.href = "#";
+        a.classList.add("restaurant_card_container");
+        a.setAttribute("data-id", restaurant.id);
+        localStorage.setItem('selectedRestaurant', JSON.stringify(restaurant));
 
-    <footer>
-      <div class="Footer_Wrap">
-        <div class="Footer_Col">
-          <h6>About Zomato</h6>
-          <ul>
-            <li><p>Who We Are</p></li>
-            <li><p>Blog</p></li>
-            <li><p>Work With Us</p></li>
-            <li><p>Investor relations</p></li>
-            <li><p>Investor Relations</p></li>
-            <li><p>report Fraud</p></li>
-            <li><p>Press Kit</p></li>
-            <li><p>Contact us</p></li>
-          </ul>
-        </div>
-        <div class="Footer_Col">
-          <h6>Zomaverse</h6>
-          <ul>
-            <li><p>Zomato</p></li>
-            <li><p>Blinkit</p></li>
-            <li><p>District</p></li>
-            <li><p>Feeding India</p></li>
-            <li><p>Hyperpure</p></li>
-            <li><p>Zomato Live</p></li>
-            <li><p>Zomaland</p></li>
-            <li><p>Weather Union</p></li>
-          </ul>
-        </div>
-        <div class="Footer_Col">
-          <h6>For Restaurants</h6>
-          <ul>
-            <li><p>Partner With Us</p></li>
-            <li><p>Apps For You</p></li>
-          </ul>
-        </div>
-        <div class="Footer_Col">
-          <h6>Social Links</h6>
-          <div class="Footer_Icon">
-            <i class="ri-linkedin-line"></i>
-            <i class="ri-youtube-line"></i>
-            <i class="ri-twitter-x-line"></i>
-            <i class="ri-instagram-line"></i>
-            <i class="ri-facebook-line"></i>
-          </div>
-          <div class="F_Payment">
-            <img src="Image/p1.webp" alt="Payment-image" />
-            <img src="Image/p2.webp" alt="Payment-image" />
-          </div>
-        </div>
-      </div>
-      <div class="Footer_Bottom">
-        <p>
-          By continuing past this page, you agree to our Terms of Serviece,
-          Cookie Policy, Privacy Policy and Content Policies. All trademarks are
-          properties of their respective owners. 2008-2025 &copy; Zomato™ Ltd.
-          All rights reserved.
-        </p>
-      </div>
-    </footer>
+        var item = document.createElement("div");
+        item.setAttribute("class", "Restaurants_product_Item");
 
-    <!-- Swiper Slider Cdn -->
-    <link
-      rel="stylesheet"
-      href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css"
-    />
-
-    <script src="./script.js"></script>
-    <script src="./Data.js"></script>
-    <script>
-      var swiper2 = new Swiper(".swiper-rastaurant", {
-        slidesPerView: 4,
-        loop: true,
-        autoplay: {
-          delay: 2000,
-        },
-        spaceBetween: 30,
-        breakpoints: {
-          1300: { slidesPerView: 4 },
-          768: { slidesPerView: 2 },
-          0: { slidesPerView: 1 },
-        },
-      });
-
-      const restaurantCard_container = document.querySelector(
-        ".Restaurant_Cards_wrapper"
-      );
-      function createRestaurantCard(Restaurant) {
-        Restaurants.forEach((restaurant) => {
-          var a = document.createElement("a");
-          a.href = "#";
-          a.classList.add("restaurant_card_container");
-          a.setAttribute("data-id", restaurant.id);
-
-          var item = document.createElement("div");
-          item.setAttribute("class", "Restaurants_product_Item");
-
-          var imageSection = document.createElement("div");
-          imageSection.setAttribute(
-            "class",
-            "Restaurants_Product_Image Section_Image"
-          );
-
-          var img = document.createElement("img");
-          img.setAttribute("src", restaurant.imageSrc);
-          img.setAttribute("alt", restaurant.imageSrc);
-
-          var offer = document.createElement("p");
-          offer.innerText = restaurant.offerText;
-
-          imageSection.appendChild(img);
-          imageSection.appendChild(offer);
-
-          var contentSection = document.createElement("div");
-          contentSection.setAttribute("class", "Restaurants_Products_Content");
-
-          var list1 = document.createElement("ul");
-          var listItem1 = document.createElement("li");
-          var restaurantTitle = document.createElement("h4");
-          restaurantTitle.innerText = restaurant.RestaurantsName;
-          listItem1.appendChild(restaurantTitle);
-          list1.appendChild(listItem1);
-
-          var listItem2 = document.createElement("li");
-          var ratingSpan = document.createElement("span");
-          ratingSpan.innerText = restaurant.rating;
-          var starIcon = document.createElement("i");
-          starIcon.setAttribute("class", "ri-star-fill");
-          listItem2.appendChild(ratingSpan);
-          listItem2.appendChild(starIcon);
-          list1.appendChild(listItem2);
-
-          var list2 = document.createElement("ul");
-          var listItem3 = document.createElement("li");
-          var categoryParagraph = document.createElement("p");
-          categoryParagraph.innerText = restaurant.category;
-          listItem3.appendChild(categoryParagraph);
-          list2.appendChild(listItem3);
-
-          var listItem4 = document.createElement("li");
-          var priceParagraph = document.createElement("p");
-          priceParagraph.innerText = restaurant.PzNAVxTQzXSe3JIriceForOne;
-          listItem4.appendChild(priceParagraph);
-          list2.appendChild(listItem4);
-
-          var timeSection = document.createElement("div");
-          timeSection.setAttribute("class", "time");
-          var timeParagraph = document.createElement("p");
-          timeParagraph.innerText = restaurant.deliveryTime;
-          timeSection.appendChild(timeParagraph);
-
-          contentSection.appendChild(list1);
-          contentSection.appendChild(list2);
-          contentSection.appendChild(timeSection);
-
-          item.appendChild(imageSection);
-          item.appendChild(contentSection);
-          a.appendChild(item);
-
-          restaurantCard_container.appendChild(a);
-        });
-      }
-
-      createRestaurantCard(Restaurants);
-
-      //   Pass Id to Url
-      document.addEventListener("DOMContentLoaded", () => {
-        const restaurant_card_container = document.querySelectorAll(
-          ".restaurant_card_container"
+        var imageSection = document.createElement("div");
+        imageSection.setAttribute(
+          "class",
+          "Restaurants_Product_Image Section_Image"
         );
 
-        restaurant_card_container.forEach((card) => {
-          card.addEventListener("click", function () {
-            const restaurantId = this.getAttribute("data-id"); // correct usage
-            // Redirect with ID in query string
-            window.location.href = `Restaurants-info.html?Id=${restaurantId}`;
-          });
+        var img = document.createElement("img");
+        img.setAttribute("src", restaurant.imageSrc);
+        img.setAttribute("alt", restaurant.imageSrc);
+
+        var offer = document.createElement("p");
+        offer.innerText = restaurant.offerText;
+
+        imageSection.appendChild(img);
+        imageSection.appendChild(offer);
+
+        var contentSection = document.createElement("div");
+        contentSection.setAttribute("class", "Restaurants_Products_Content");
+
+        var list1 = document.createElement("ul");
+        var listItem1 = document.createElement("li");
+        var restaurantTitle = document.createElement("h4");
+        restaurantTitle.innerText = restaurant.RestaurantsName;
+        listItem1.appendChild(restaurantTitle);
+        list1.appendChild(listItem1);
+
+        var listItem2 = document.createElement("li");
+        var ratingSpan = document.createElement("span");
+        ratingSpan.innerText = restaurant.rating;
+        var starIcon = document.createElement("i");
+        starIcon.setAttribute("class", "ri-star-fill");
+        listItem2.appendChild(ratingSpan);
+        listItem2.appendChild(starIcon);
+        list1.appendChild(listItem2);
+
+        var list2 = document.createElement("ul");
+        var listItem3 = document.createElement("li");
+        var categoryParagraph = document.createElement("p");
+        categoryParagraph.innerText = restaurant.category;
+        listItem3.appendChild(categoryParagraph);
+        list2.appendChild(listItem3);
+
+        var listItem4 = document.createElement("li");
+        var priceParagraph = document.createElement("p");
+        priceParagraph.innerText = restaurant.PzNAVxTQzXSe3JIriceForOne;
+        listItem4.appendChild(priceParagraph);
+        list2.appendChild(listItem4);
+
+        var timeSection = document.createElement("div");
+        timeSection.setAttribute("class", "time");
+        var timeParagraph = document.createElement("p");
+        timeParagraph.innerText = restaurant.deliveryTime;
+        timeSection.appendChild(timeParagraph);
+
+        contentSection.appendChild(list1);
+        contentSection.appendChild(list2);
+        contentSection.appendChild(timeSection);
+
+        item.appendChild(imageSection);
+        item.appendChild(contentSection);
+        a.appendChild(item);
+
+        restaurantCard_container.appendChild(a);
+      });
+    }
+
+    createRestaurantCard(Restaurants);
+
+    //   Pass Id to Url
+    document.addEventListener("DOMContentLoaded", () => {
+      const restaurant_card_container = document.querySelectorAll(
+        ".restaurant_card_container"
+      );
+
+      restaurant_card_container.forEach((card) => {
+        card.addEventListener("click", function () {
+          const restaurantId = this.getAttribute("data-id"); // correct usage
+          // Redirect with ID in query string
+          window.location.href = `Restaurants-info.html?Id=${restaurantId}`;
         });
       });
+    });
 
-      const Login_Form = document.querySelector(".ModelFrom");
+    const Login_Form = document.querySelector(".ModelFrom");
 
-      const LoginBtn = document.querySelector("#LoginBtn");
-      const LoginBtn2 = document.querySelector("#LoginBtn2");
-      const NavSigninbtn = document.querySelector("#NavSigninbtn");
-      const NavLoginbtn = document.querySelector("#NavLoginbtn");
-      const closebtn = document.querySelector(".modal-header button");
+    const LoginBtn = document.querySelector("#LoginBtn");
+    const LoginBtn2 = document.querySelector("#LoginBtn2");
+    const NavSigninbtn = document.querySelector("#NavSigninbtn");
+    const NavLoginbtn = document.querySelector("#NavLoginbtn");
+    const closebtn = document.querySelector(".modal-header button");
 
-      const Registration_form = document.querySelector(".Registration_form");
-      const close_btn2 = document.querySelector("#SignUpBtn");
-      console.log(close_btn2);
-      const closebtn2 = document.querySelector("#close-btn2");
-      const openlogin = document.querySelector("#openlogin");
-      const openRegistration = document.querySelector("#openRegistration");
+    const Registration_form = document.querySelector(".Registration_form");
+    const close_btn2 = document.querySelector("#SignUpBtn");
+    console.log(close_btn2);
+    const closebtn2 = document.querySelector("#close-btn2");
+    const openlogin = document.querySelector("#openlogin");
+    const openRegistration = document.querySelector("#openRegistration");
 
-      closebtn.addEventListener("click", function () {
-        Login_Form.style.display = "none";
-      });
+    closebtn.addEventListener("click", function () {
+      Login_Form.style.display = "none";
+    });
 
-      LoginBtn.addEventListener("click", function () {
-        Login_Form.style.display = "flex";
-      });
+    LoginBtn.addEventListener("click", function () {
+      Login_Form.style.display = "flex";
+    });
 
-      NavSigninbtn.addEventListener("click", function () {
-        Login_form.style.display = "flex";
-      });
+    NavSigninbtn.addEventListener("click", function () {
+      Login_form.style.display = "flex";
+    });
 
-      NavSigninbtn.addEventListener("click", function () {
-        Login_form.style.display = "flex";
-      });
+    NavSigninbtn.addEventListener("click", function () {
+      Login_form.style.display = "flex";
+    });
 
-      LoginBtn2.addEventListener("click", function () {
-        Registration_form.style.display = "flex";
-      });
+    LoginBtn2.addEventListener("click", function () {
+      Registration_form.style.display = "flex";
+    });
 
-      closebtn2.addEventListener("click", function () {
-        Registration_form.style.display = "none";
-      });
+    closebtn2.addEventListener("click", function () {
+      Registration_form.style.display = "none";
+    });
 
-      close_btn2.addEventListener("click", function () {
-        Registration_form.style.display = "flex";
-      });
+    close_btn2.addEventListener("click", function () {
+      Registration_form.style.display = "flex";
+    });
 
-      NavSigninbtn.addEventListener("click", function () {
-        Registration_form.style.display = "flex";
-      });
+    NavSigninbtn.addEventListener("click", function () {
+      Registration_form.style.display = "flex";
+    });
 
-      openlogin.addEventListener("click", function () {
-        Registration_form.style.display = "none";
-        Login_form.style.display = "flex";
-      });
+    openlogin.addEventListener("click", function () {
+      Registration_form.style.display = "none";
+      Login_form.style.display = "flex";
+    });
 
-      openRegistration.addEventListener("click", function () {
-        Registration_form.style.display = "flex";
-        Login_form.style.display = "none";
-      });
+    openRegistration.addEventListener("click", function () {
+      Registration_form.style.display = "flex";
+      Login_form.style.display = "none";
+    });
 
-      const nav = document.querySelector("nav");
-      const body = document.querySelector("body");
-      let search_box = document.querySelector(".search_wrapper");
-      let logo = document.querySelector(".logo a");
-      let menu_icons = document.querySelector(".menu li i");
-      let menu_links = document.querySelector(".menu li a");
+    const nav = document.querySelector("nav");
+    const body = document.querySelector("body");
+    let search_box = document.querySelector(".search_wrapper");
+    let logo = document.querySelector(".logo a");
+    let menu_icons = document.querySelector(".menu li i");
+    let menu_links = document.querySelector(".menu li a");
 
-      window.addEventListener("scroll", () => {
-        if (window.scrollY > 500) {
-          nav.classList.add("sticky_nav");
-          search_box.classList.add("sticky_search_box");
-          logo.classList.add("sticky_menu");
-          menu_links.forEach((links) => {
-            links.classList.add("sticky_menu");
-          });
-        } else {
-          nav.classList.remove("sticky_nav");
-          search_box.classList.remove("sticky_search_box");
-          logo.classList.remove("sticky_menu");
-          menu_links.forEach((links) => {
-            links.classList.remove("sticky_menu");
-          });
-        }
-      });
-    </script>
-  </body>
+    window.addEventListener("scroll", () => {
+      if (window.scrollY > 500) {
+        nav.classList.add("sticky_nav");
+        search_box.classList.add("sticky_search_box");
+        logo.classList.add("sticky_menu");
+        menu_links.forEach((links) => {
+          links.classList.add("sticky_menu");
+        });
+      } else {
+        nav.classList.remove("sticky_nav");
+        search_box.classList.remove("sticky_search_box");
+        logo.classList.remove("sticky_menu");
+        menu_links.forEach((links) => {
+          links.classList.remove("sticky_menu");
+        });
+      }
+    });
+  </script>
+</body>
+
 </html>
