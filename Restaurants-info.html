@@ -292,8 +292,8 @@
 <div class="restaurant_buttons">
     <p><i class="ri-direction-line"></i> Direction</p>
     <p><i class="ri-share-forward-line"></i> Share</p>
-    <p id="Reviewbtn"><i class="ri-chat-3-line"></i> Reviews</p>
-    ${product.open === "true" ? `<p id="bookatableBtn"><i class="ri-calendar-line"></i> Book a table</p>` : ""}
+    <p id="ReviewBtn"><i class="ri-chat-3-line"></i> Reviews</p>
+    ${product.open === "true" ? `<p id="bookaTableBtn"><i class="ri-calendar-line"></i> Book a table</p>` : ""}
  </div >
 
  <div class="Restaurant_image_gallery"></div>
@@ -315,50 +315,12 @@
     </ul>
 </div>
 <div class="product_container_wrapper" id="orderOnline_Description">
-      <ul class="Product_Container_wrapper_list">
-      
-      </ul>
-   <div class='Product_Container_Content'>
-        <ul class='Product_Container_Menu_Container'>
-        <h4>Personal Slice Pizza.</h4>
-        <h4>Personal Slice Veg Pizza.</h4>
-        <li>
-          <div class="Product_Container_menu_Item">
-            <div class="Product_Container_menu_Image">
-              <img src="Image/Product_Container_menu_Image2.avif" alt="">
-              <img src="Image/veg.jpg" alt="" id="veg_icon">
-            </div>
-            <div class="Product_Container_menu_Content">
-              <h4>Chessy Macaroni (prsonal Giant Slice (22.5 cm))</h4>
-              <span>₹286</span>
-              <p>Panner,Onions,Capsicum, Olives, Baby Corns With Loads of Cheese</p>
-            </div>
-          </div>
-        </li>
-        <li>
-          <div class="Product_Container_menu_Item">
-            <div class="Product_Container_menu_Image">
-              <img src="Image/Product_Container_menu_Image3.avif" alt="">
-              <img src="Image/veg.jpg" alt="" id="veg_icon">
-            </div>
-            <div class="Product_Container_menu_Content">
-              <h4>Margherita Pizza (prsonal Giant Slice (22.5 cm))</h4>
-              <div class="Product_Container_menu_Content_Star">
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-                <i class="ri-star-fill"></i>
-              </div>
-              <span>₹286</span>
-              <p>A Classic Cheesy Margherita. Cant go wrong. [fat-14.3 per 100g, protrin-12.6 per 100gm </p>
-            </div>
-          </div>
-        </li>
-        </ul>
-    </div>
+  <ul class="Product_Container_wrapper_list"></ul>
+
+  <div class="Product_Container_Content"></div> 
 </div>
-  <div class="Review_Container" id="Review_Description">
+
+  <div class="Reviews_Container" id="Reviews_Description">
       <div class="Reviews_Top">
         <div class="Reviews_Box_left">
           <h2>La Pino's Pizza Reviews</h2>
@@ -641,31 +603,80 @@
 
             checkButtonStatus();
 
-            const Product_Container_Wrapper_list = document.querySelector('.Product_Container_wrapper_list');
+            document.addEventListener('DOMContentLoaded', () => {
+                // Pick the first restaurant for example
 
-            product.mealCategories.forEach(category => {
-                const li = document.createElement('li');
-                const p = document.createElement('p');
-                p.textContent = category.categoryName;
-                li.appendChild(p);
-                Product_Container_Wrapper_list.appendChild(li)
+                console.log("Loaded product:", product); // Check if it's defined
+
+                if (product && Array.isArray(product.mealCategory)) {
+                    const wrapperList = document.querySelector('.Product_Container_wrapper_list');
+                    const content = document.querySelector('.Product_Container_Content');
+                    wrapperList.innerHTML = '';
+                    content.innerHTML = '';
+
+                    product.mealCategory.forEach(category => {
+                        // Create category list
+                        const li = document.createElement('li');
+                        const p = document.createElement('p');
+                        p.textContent = category.categoryName;
+                        li.appendChild(p);
+                        wrapperList.appendChild(li);
+
+                        const ul = document.createElement('ul');
+                        ul.classList.add('Product_Container_Menu_Container');
+
+                        category.meals.forEach(meal => {
+                            const h4 = document.createElement('h4');
+                            h4.textContent = meal.mealName;
+                            ul.appendChild(h4);
+
+                            meal.dishOption.forEach(dish => {
+                                const li = document.createElement('li');
+                                const item = document.createElement('div');
+                                item.className = 'Product_Container_menu_Item';
+
+                                const imgWrap = document.createElement('div');
+                                imgWrap.className = 'Product_Container_menu_Image';
+                                const dishImg = document.createElement('img');
+                                dishImg.src = dish.dishImage;
+                                dishImg.alt = dish.dishName;
+
+                                const vegIcon = document.createElement('img');
+                                vegIcon.src = 'Image/veg.jpg';
+                                vegIcon.id = 'veg_icon';
+
+                                imgWrap.appendChild(dishImg);
+                                imgWrap.appendChild(vegIcon);
+
+                                const contentBox = document.createElement('div');
+                                contentBox.className = 'Product_Container_menu_Content';
+
+                                const name = document.createElement('h4');
+                                name.textContent = dish.dishName;
+
+                                const price = document.createElement('span');
+                                price.textContent = dish.price;
+
+                                const desc = document.createElement('p');
+                                desc.textContent = dish.dishDesc || 'No description provided.';
+
+                                contentBox.appendChild(name);
+                                contentBox.appendChild(price);
+                                contentBox.appendChild(desc);
+
+                                item.appendChild(imgWrap);
+                                item.appendChild(contentBox);
+                                li.appendChild(item);
+                                ul.appendChild(li);
+                            });
+                        });
+
+                        content.appendChild(ul);
+                    });
+                } else {
+                    console.error("product or product.mealCategory is undefined or not an array");
+                }
             });
-
-            const Product_Container_Content = document.querySelector('.Product_Container_Content');
-            Product_Container_Content.innerHTML = '';
-
-            product.mealCategories.forEach(category => {
-                category.meals.forEach(meal => {
-                    const ul = document.createElement('ul');
-                    ul.classList.add('Product_Container_Menu_Container');
-
-                    const h4 = document.createElement('h4');
-                    h4.textContent = meal.mealName;
-                    ul.appendChild(h4)
-                });
-            });
-
-
 
 
             const Restaurant_image_gallery = document.querySelector('.Restaurant_image_gallery');
@@ -695,13 +706,78 @@
                 li.appendChild(p);
 
                 Product_Container_wrapper_list.appendChild(li)
-            })
+            });
+            const Product_Photo_Container_Wrap = document.querySelector('.Product_Photo_Container_Wrap');
 
+            product.Gallery.forEach(element => {
+                const Product_Photo_Container_Image = document.createElement('div');
+                Product_Photo_Container_Image.classList.add('Product_Photo_Container_Image');
+                Product_Photo_Container_Image.classList.add('Section_Image');
+
+                const img = document.createElement('img');
+                img.src = element.imageSrc;
+                img.alt = element.imageSrc;
+
+                Product_Photo_Container_Image.appendChild(img);
+                Product_Photo_Container_Wrap.appendChild(Product_Photo_Container_Image);
+            });
+        }
+        DisplayDetails(restaurantID);
+
+        // Tab Online Order, reviews, Photo
+
+        const OrderOnline = document.querySelector('#orderOnline_tab');
+        const OrderOnlineDescription = document.querySelector('#orderOnline_Description');
+
+        const Reviews_tab = document.querySelector('#Reviews_tab');
+        const Reviews_Description = document.querySelector('#Reviews_Description');
+
+        const Photos_tab = document.querySelector('#Photos_tab');
+        const Photos_description = document.querySelector('#Photos_descrioption');
+
+        const Demo_tab = document.querySelector('#Demo_tab');
+        const bookaTableBtn = document.querySelector('#bookaTableBtn');
+        const ReviewBtn = document.querySelector('#ReviewBtn');
+        const Demo_Description = document.querySelector('#Demo_Description');
+
+        function hideAllSections() {
+            OrderOnlineDescription.style.display = 'none';
+            Reviews_Description.style.display = 'none';
+            Photos_description.style.display = 'none';
+            Demo_Description.style.display = 'none';
         }
 
+        OrderOnline.addEventListener('click', () => {
+            hideAllSections();
+            OrderOnlineDescription.style.display = 'block';
+        });
+
+        Reviews_tab.addEventListener('click', () => {
+            hideAllSections();
+            Reviews_Description.style.display = 'block';
+        });
+
+        ReviewBtn.addEventListener('click', () => {
+            hideAllSections();
+            Reviews_Description.style.display = 'block';
+        });
+
+        Photos_tab.addEventListener('click', () => {
+            hideAllSections();
+            Photos_description.style.display = 'block';
+        });
+
+        Demo_tab.addEventListener('click', () => {
+            hideAllSections();
+            Demo_Description.style.display = 'block';
+        });
+
+        bookaTableBtn.addEventListener('click', () => {
+            hideAllSections();
+            Demo_Description.style.display = 'block';
+        });
 
 
-        DisplayDetails(restaurantID);
         const Login_Form = document.querySelector(".ModelFrom");
 
         const LoginBtn = document.querySelector("#LoginBtn");
