@@ -1817,7 +1817,7 @@ footer {
 .Product_Photo_Container_Wrap {
   width: 100%;
   display: grid;
-  grid-template-columns: repeat(7, 1fr);
+  grid-template-columns: repeat(4, 1fr);
   place-items: center;
   place-content: center;
   padding: 20px 0;
@@ -1825,7 +1825,7 @@ footer {
 }
 
 .Product_Photo_Container_Image {
-  width: 100%;
+  width: 100% ;
   height: 150px !important;
   border-radius: 12px;
   overflow: hidden;
@@ -1834,6 +1834,7 @@ footer {
 .Product_Photo_Container_Image img {
   transition: var(--transition);
   object-fit: cover;
+  border-radius: 20px;
 }
 
 .Product_Photo_Container_Image:hover img {
@@ -1879,11 +1880,11 @@ footer {
 }
 
 /* Tab */
-/* #Reviews_Description,
+#Reviews_Description,
 #Photos_descrioption,
 .BookDemoClass {
   display: none;
-} */
+}
 
 .Show_Description {
   display: flex !important;
@@ -1954,7 +1955,6 @@ footer {
 
 .BookDemoClass .BookaTable_wrapper .SlotDetails .BookingSlot_wrapper {
   display: flex;
-  flex-direction: column;
   gap: 30px;
 }
 
