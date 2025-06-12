@@ -1266,7 +1266,7 @@ footer {
   display: flex;
   justify-content: space-between;
   width: 100%;
-  margin-top: 80px;
+  margin-top: 125px;
 }
 
 .Restaurant_info_wrapper .Restaurant_info .Basic_info {
@@ -1782,4 +1782,325 @@ footer {
 
 .Rate {
   background-color: var(--prim-color) !important ;
+}
+
+.Product_Photo_Container {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Product_Photo_Container ul {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
+  margin: 20px 0;
+}
+
+.Product_Photo_Container ul li {
+  padding: 8px 20px;
+  border: 1px solid rgb(181, 181, 181);
+  border-radius: 8px;
+  font-size: 0.9rem;
+  color: #9c9c9c;
+  font-weight: 300;
+}
+
+.Product_Photo_Container ul li:nth-child(1) {
+  background-color: var(--prim-color);
+  color: var(--white-color);
+  border: none;
+}
+
+.Product_Photo_Container_Wrap {
+  width: 100%;
+  display: grid;
+  grid-template-columns: repeat(7, 1fr);
+  place-items: center;
+  place-content: center;
+  padding: 20px 0;
+  gap: 10px;
+}
+
+.Product_Photo_Container_Image {
+  width: 100%;
+  height: 150px !important;
+  border-radius: 12px;
+  overflow: hidden;
+}
+
+.Product_Photo_Container_Image img {
+  transition: var(--transition);
+  object-fit: cover;
+}
+
+.Product_Photo_Container_Image:hover img {
+  transform: scale(1.1);
+}
+
+.Product_Details {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+}
+
+.Product_Details_Item {
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: flex-start;
+  flex-direction: column;
+}
+
+.Product_Details_Item h6 {
+  text-transform: uppercase;
+  font-size: 1.1rem;
+  color: var(--black-color);
+  font-weight: 500;
+  padding-bottom: 10px;
+}
+
+.Product_Location {
+  width: 100%;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
+  flex-wrap: wrap;
+}
+
+.Product_Location p {
+  color: rgb(156, 156, 156);
+  font-size: 0.9rem;
+  line-height: 1.5rem;
+  letter-spacing: 0.5px;
+  font-weight: 300;
+}
+
+/* Tab */
+/* #Reviews_Description,
+#Photos_descrioption,
+.BookDemoClass {
+  display: none;
+} */
+
+.Show_Description {
+  display: flex !important;
+}
+
+.BookDemoClass,
+.offerDetails {
+  width: 100%;
+}
+
+.BookDemoClass .Bookatable_wrapper {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.BookDemoClass .Bookatable_wrapper .bookingDetails {
+  margin-top: 30px;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+}
+
+.BookDemoClass .BookaTable_wrapper .bookingDetails h2,
+.BookDemoClass .SlotDetails h2,
+.offerDetails h2 {
+  font-weight: 600;
+  font-size: 24px;
+  text-transform: capitalize;
+}
+
+.BookDemoClass .BookaTable_wrapper {
+  width: 60%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.BookDemoClass .BookaTable_wrapper .bookingDetails {
+  width: 100%;
+}
+
+.BookDemoClass .BookaTable_wrapper .bookingDetails .bookingdetails_header {
+  width: 100%;
+  display: flex;
+  gap: 30px;
+}
+
+.BookDemoClass
+  .BookaTable_wrapper
+  .bookingDetails
+  .bookingdetails_header
+  select {
+  width: 100%;
+  padding: 10px 20px;
+  border: 1px solid #e9e9e9;
+  border-radius: 10px;
+}
+
+.BookDemoClass .BookaTable_wrapper .SlotDetails {
+  width: 100%;
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.BookDemoClass .BookaTable_wrapper .SlotDetails .BookingSlot_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 30px;
+}
+
+.BookDemoClass button {
+  width: 100%;
+  height: 45px;
+  cursor: pointer;
+  font-size: 16px;
+  border: none;
+  background-color: rgb(255, 127, 127);
+  color: var(--white-color);
+}
+
+.BookDemoClass button:disabled {
+  background-color: #f3f3f3;
+  cursor: no-drop;
+  color: #1e1e1e;
+}
+
+.BookDemoClass button:hover {
+  background-color: rgb(255, 199, 199);
+  color: #363636;
+}
+
+.BookingSlot label {
+  padding: 6px 22px;
+  border: 1px solid #e9e9e9;
+  width: fit-content;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  border-radius: 12px;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.BookingSlot label:hover {
+  border-color: var(--prim-color);
+}
+
+.BookingSlot lebel span {
+  font-size: 13px;
+  font-weight: 500;
+}
+
+.offerDetails h2 {
+  margin-bottom: 20px;
+}
+
+.offerDetails .Offer_wrapper {
+  width: 100%;
+  display: flex;
+  align-items: flex-start;
+  gap: 30px;
+}
+
+.BookingSlot {
+  position: relative;
+}
+
+.Offer {
+  height: 150px;
+  width: 200px;
+  padding: 20px;
+  border-radius: 12px;
+  position: relative;
+  border: 1px solid #d2d2d2;
+  box-shadow: 0 0 20px rgba(0, 0, 0, 0.08);
+  display: flex;
+  align-items: flex-start;
+  flex-direction: column;
+  justify-content: end;
+  cursor: pointer;
+}
+
+.Offer img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 60px;
+  border-top-left-radius: 12px;
+}
+
+.Offer input {
+  position: relative;
+  top: 5px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  opacity: 0;
+}
+
+.BookingSlot .circle,
+.Offer .circle {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  height: 20px;
+  width: 20px;
+  border-radius: 50%;
+  border: 1px solid #9c9c9c;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.BookingSlot input {
+  opacity: 0;
+}
+
+.Offer .circle i,
+.BookingSlot .circle i {
+  opacity: 0;
+}
+
+.BookingSlot .circle {
+  width: 12px;
+  height: 12px;
+}
+
+input:checked ~ .circle {
+  background-color: var(--prim-color);
+  border-color: var(--prim-color);
+}
+
+input:checked ~ .circle i {
+  opacity: 1;
+  color: var(--white-color);
+}
+
+.BookingSlot .circle i {
+  font-size: 10px;
+}
+
+.Offer span {
+  font-size: 1rem;
+  font-weight: 600;
+  color: #363636;
+}
+
+.Offer h3 {
+  font-size: 22px;
+}
+
+.Offer small {
+  font-size: 8px;
 }
