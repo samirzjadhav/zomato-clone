@@ -597,12 +597,48 @@
                 <hr>
                 <p> Sub total <span id="subTotal">₹0</span></p>
                 <p class="total">To be paid <span id="totalToPay">₹0</span></p>
+                <button class='order_btn'>Order Now</button>
             </div>
         </div>
     </div>
 
 
 `;
+            document.addEventListener('DOMContentLoaded', () => {
+                // ✅ Declare updateBookingSummary FIRST
+                function updateBookingSummary(restaurant) {
+                    const coverCharge = 50;
+                    const priceString = restaurant.PriceForOne || restaurant.priceForOne;
+                    const numericPrice = parseInt(priceString.replace(/[^\d]/g, '')) || 0;
+                    const subTotal = numericPrice;
+                    const totalToPay = subTotal + coverCharge;
+
+                    document.getElementById('coverCharge').innerHTML = `₹${coverCharge}`;
+                    document.getElementById('subTotal').innerHTML = `₹${subTotal}`;
+                    document.getElementById('totalToPay').innerHTML = `₹${totalToPay}`;
+                }
+
+                const selectedRestaurant = JSON.parse(localStorage.getItem('selectedRestaurant'));
+
+                // ✅ Load summary on page load if selectedRestaurant exists
+                if (selectedRestaurant) {
+                    updateBookingSummary(selectedRestaurant);
+                }
+
+                // ✅ Proceed button logic
+                const proceedButton = document.getElementById('proceedBtn');
+                const checkout_section = document.querySelector('.checkout_section');
+
+                proceedButton.addEventListener('click', () => {
+                    hideAllSections(); // your hideAllSections function
+                    if (selectedRestaurant) updateBookingSummary(selectedRestaurant);
+                    if (checkout_section) checkout_section.style.display = 'flex';
+                    else console.error('checkout_section not found');
+                });
+
+                // ✅ All your remaining script here...
+            });
+
 
 
             const offerCheckBoxes = document.querySelectorAll('.offerDetails input[type="checkbox"]');
@@ -776,6 +812,7 @@
         const ReviewBtn = document.querySelector('#ReviewBtn');
         const Demo_Description = document.querySelector('#Demo_Description');
 
+
         function hideAllSections() {
             OrderOnlineDescription.style.display = 'none';
             Reviews_Description.style.display = 'none';
@@ -812,6 +849,7 @@
             hideAllSections();
             Demo_Description.style.display = 'block';
         });
+
 
 
         const Login_Form = document.querySelector(".ModelFrom");
