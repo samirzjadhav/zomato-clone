@@ -2217,3 +2217,56 @@ input:checked ~ .circle i {
   margin-top: 20px;
   cursor: pointer;
 }
+
+/* ================= Collection Page ================== */
+
+.Collection {
+  padding-top: 140px;
+  align-items: start;
+  flex-direction: column;
+}
+
+.Collection_Banner {
+  width: 100%;
+  position: relative;
+  height: 450px;
+  border-radius: 12px;
+  background-image: url(Image/Collection_Banner.avif);
+  background-repeat: no-repeat;
+  background-position: center center;
+  background-size: cover;
+}
+
+.Collection_Banner_Info {
+  width: 40%;
+  position: absolute;
+  bottom: 20%;
+  left: 0;
+  color: var(--white-color);
+  background-color: rgba(28, 28, 28, 0.86);
+  padding: 30px;
+}
+
+.Collection_Banner_Info span {
+  color: var(--white-color);
+  text-transform: uppercase;
+  font-weight: 600;
+}
+
+.Collection_Banner_Info h1 {
+  font-size: 2rem;
+  font-weight: 500;
+  padding-bottom: 10px;
+  text-transform: capitalize;
+}
+
+.Collection_Banner_Info p {
+  color: rgb(208, 212, 229);
+  font-size: 0.9rem;
+  font-weight: 400;
+}
+
+#Home,
+.Popular-Locations_Item i {
+  color: #1e1e1e;
+}
