@@ -199,18 +199,111 @@
 
 
     <script>
-        const Collection_wrapper = document.querySelector('.Restaurant_Cards_Wrapper');
-        function createRestaurantCard(Restaurants) {
-            Restaurants.forEach((restaurants) => {
-                restaurants.mealCategory.forEach((category) => {
+        const Collection_wrapper = document.querySelector('.Restaurant_Cards_wrapper');
 
-                    category.meals.forEach((meal)=>{
-                        var item = document.createElement('div');
-                    })
-                })
-            })
+        function createRestaurantCard(Restaurant) {
+            Restaurant.mealCategory.forEach((category) => {
+                category.meals.forEach((meal) => {
+                    meal.dishOption.forEach((dish) => {
+                        // Create wrapper
+                        const item = document.createElement('div');
+                        item.className = 'Restaurants_product_Item';
+
+                        const a = document.createElement('a');
+                        a.href = '#';
+                        a.classList.add('restaurant_card_container');
+                        a.setAttribute('data-id', Restaurant.id);
+
+                        // Image Section
+                        const imageSection = document.createElement('div');
+                        imageSection.className = 'Restaurants_Product_Image Section_Image';
+
+                        const img = document.createElement('img');
+                        img.src = dish.dishImage;
+                        img.alt = dish.dishName;
+
+                        const offer = document.createElement('p');
+                        offer.textContent = Restaurant.RestaurantsName;
+
+                        imageSection.appendChild(img);
+                        imageSection.appendChild(offer);
+
+                        // Content Section
+                        const contentSection = document.createElement('div');
+                        contentSection.className = 'Restaurants_Products_Content';
+
+                        // List 1: Dish Name + Rating
+                        const list1 = document.createElement('ul');
+
+                        const listItem1 = document.createElement('li');
+                        const dishTitle = document.createElement('h4');
+                        dishTitle.textContent = dish.dishName;
+                        listItem1.appendChild(dishTitle);
+
+                        const listItem2 = document.createElement('li');
+                        const ratingSpan = document.createElement('span');
+                        ratingSpan.textContent = Restaurant.rating;
+                        const starIcon = document.createElement('i');
+                        starIcon.className = 'ri-star-fill';
+                        listItem2.appendChild(ratingSpan);
+                        listItem2.appendChild(starIcon);
+
+                        list1.appendChild(listItem1);
+                        list1.appendChild(listItem2);
+
+                        // List 2: Category + Price
+                        const list2 = document.createElement('ul');
+
+                        const listItem3 = document.createElement('li');
+                        const categoryPara = document.createElement('p');
+                        categoryPara.textContent = Restaurant.category;
+                        listItem3.appendChild(categoryPara);
+
+                        const listItem4 = document.createElement('li');
+                        const priceSpan = document.createElement('span');
+                        priceSpan.textContent = dish.price;
+                        listItem4.appendChild(priceSpan);
+
+                        list2.appendChild(listItem3);
+                        list2.appendChild(listItem4);
+
+                        // Delivery Time
+                        const timeSection = document.createElement('div');
+                        timeSection.className = 'time';
+                        const timePara = document.createElement('p');
+                        timePara.textContent = Restaurant.deliveryTime;
+                        timeSection.appendChild(timePara);
+
+                        // Append all to contentSection
+                        contentSection.appendChild(list1);
+                        contentSection.appendChild(list2);
+                        contentSection.appendChild(timeSection);
+
+                        // Append to item
+                        item.appendChild(imageSection);
+                        item.appendChild(contentSection);
+                        a.appendChild(item);
+
+                        // Append to main container
+                        Collection_wrapper.appendChild(a);
+                    });
+                });
+            });
         }
-        createRestaurantCard()
+        // Example call:
+        createRestaurantCard(Restaurants[0]); // if you have an array of restaurants
+
+        // Id Pass in url on click on card 
+
+        const RestaurantCardContainer = document.querySelectorAll('.restaurant_card_container');
+
+        RestaurantCardContainer.forEach(card => {
+            card.addEventListener('click', function () {
+                const restaurantId = this.getAttribute('data-id');
+                window.loaction.href = `Restaurant-info.html?id=${restaurantId}`
+            })
+        })
+
     </script>
 </body>
 
