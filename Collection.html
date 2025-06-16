@@ -290,9 +290,19 @@
                 });
             });
         }
-
         // Example call:
         createRestaurantCard(Restaurants[0]); // if you have an array of restaurants
+
+        // Id Pass in url on click on card 
+
+        const RestaurantCardContainer = document.querySelectorAll('.restaurant_card_container');
+
+        RestaurantCardContainer.forEach(card => {
+            card.addEventListener('click', function () {
+                const restaurantId = this.getAttribute('data-id');
+                window.loaction.href = `Restaurant-info.html?id=${restaurantId}`
+            })
+        })
 
     </script>
 </body>
