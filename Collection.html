@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <!-- Remix Icon -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <!-- Swiper SLider Cdn -->
+    <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
+
+    <title>Zomato Clone</title>
+</head>
+
+<body>
+
+    <!-- Header section -->
+    <div class="header_section">
+        <nav>
+            <div class="logo">
+                <a href="index.html">
+                    <img src="Image/zomato-logo2.avif" alt="logo" height="40px" width="160px" /></a>
+            </div>
+            <div class="search_wrapper">
+                <div class="search_cate">
+                    <div class="search_box">
+                        <div class="Search_Content">
+                            <div class="">
+                                <svg xmlns="http://www.w3.org/2000/svg" fill="#FF7E8B" width="20" height="20"
+                                    viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                    class="sc-rbbb40-0 iRDDBk">
+                                    <title>location-fill</title>
+                                    <path
+                                        d="M10.2 0.42c-4.5 0-8.2 3.7-8.2 8.3 0 6.2 7.5 11.3 7.8 11.6 0.2 0.1 0.3 0.1 0.4 0.1s0.3 0 0.4-0.1c0.3-0.2 7.8-5.3 7.8-11.6 0.1-4.6-3.6-8.3-8.2-8.3zM10.2 11.42c-1.7 0-3-1.3-3-3s1.3-3 3-3c1.7 0 3 1.3 3 3s-1.3 3-3 3z">
+                                    </path>
+                                </svg>
+                                <a href="">Vadodara</a>
+                            </div>
+                            <i class="ri-arrow-down-s-fill"></i>
+                        </div>
+                        <ul class="search_dropdown">
+                            <li>
+                                <a href="#">
+                                    <svg xmlns="http://www.w3.org/2000/svg" fill="#EF4F5F" width="14" height="14"
+                                        viewBox="0 0 20 20" aria-labelledby="icon-svg-title- icon-svg-desc-" role="img"
+                                        class="sc-rbbb40-0 kyPUnV">
+                                        <title>current-location</title>
+                                        <path
+                                            d="M13.58 10c0 1.977-1.603 3.58-3.58 3.58s-3.58-1.603-3.58-3.58c0-1.977 1.603-3.58 3.58-3.58v0c1.977 0 3.58 1.603 3.58 3.58v0zM20 9.52v0.96c0 0.265-0.215 0.48-0.48 0.48v0h-1.72c-0.447 3.584-3.256 6.393-6.802 6.836l-0.038 0.004v1.72c0 0.265-0.215 0.48-0.48 0.48v0h-0.96c-0.265 0-0.48-0.215-0.48-0.48v0-1.72c-3.575-0.455-6.375-3.262-6.816-6.802l-0.004-0.038h-1.74c-0.265 0-0.48-0.215-0.48-0.48v0-0.96c0-0.265 0.215-0.48 0.48-0.48v0h1.74c0.445-3.578 3.245-6.385 6.781-6.836l0.039-0.004v-1.72c0-0.265 0.215-0.48 0.48-0.48v0h0.96c0.265 0 0.48 0.215 0.48 0.48v0 1.72c3.584 0.447 6.393 3.256 6.836 6.802l0.004 0.038h1.72c0.265 0 0.48 0.215 0.48 0.48v0zM15.96 10c0-3.292-2.668-5.96-5.96-5.96s-5.96 2.668-5.96 5.96c0 3.292 2.668 5.96 5.96 5.96v0c3.292 0 5.96-2.668 5.96-5.96v0z">
+                                        </path>
+                                    </svg>
+                                    <div class="location_info">
+                                        <p>Detect current location</p>
+                                        <p>using GPS</p>
+                                    </div>
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
+                    <div class="input_box">
+                        <i class="ri-search-2-line search_wrapper_icon"></i>
+                        <input type="text" placeholder="Search For Restaurant" />
+                    </div>
+                </div>
+            </div>
+            <div class="Sidebar">
+                <div class="sidebar_menu">
+                    <a href="#" id="LoginBtn">Log In</a>
+                    <a href="#" id="SignUpBtn">Sign Up</a>
+                </div>
+            </div>
+        </nav>
+    </div>
+
+
+    <section class="Collection">
+        <p><a href="index.html" id="Home">Home</a> / <span>Collections</span></p>
+        <div class="Collection_Banner">
+            <div class="Collection_Banner_Info">
+                <span> ZOMATO COLLECTIONS</span>
+                <h1>Great Cafes</h1>
+                <p>Discover cozy corners and lively spaces with the best brews, delightful desserts, and perfect vibes.
+                    Handpicked cafes
+                    to relax, work, or catch up with friends.
+                </p>
+                <p class="places">14 Places</p>
+            </div>
+        </div>
+    </section>
+
+    <section>
+        <div class="Restaurant_Cards_wrapper">
+            <!-- Dynamic Data Loads Here  -->
+        </div>
+    </section>
+
+    <footer>
+        <div class="Footer_Wrap">
+            <div class="Footer_Col">
+                <h6>About Zomato</h6>
+                <ul>
+                    <li>
+                        <p>Who We Are</p>
+                    </li>
+                    <li>
+                        <p>Blog</p>
+                    </li>
+                    <li>
+                        <p>Work With Us</p>
+                    </li>
+                    <li>
+                        <p>Investor relations</p>
+                    </li>
+                    <li>
+                        <p>Investor Relations</p>
+                    </li>
+                    <li>
+                        <p>report Fraud</p>
+                    </li>
+                    <li>
+                        <p>Press Kit</p>
+                    </li>
+                    <li>
+                        <p>Contact us</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer_Col">
+                <h6>Zomaverse</h6>
+                <ul>
+                    <li>
+                        <p>Zomato</p>
+                    </li>
+                    <li>
+                        <p>Blinkit</p>
+                    </li>
+                    <li>
+                        <p>District</p>
+                    </li>
+                    <li>
+                        <p>Feeding India</p>
+                    </li>
+                    <li>
+                        <p>Hyperpure</p>
+                    </li>
+                    <li>
+                        <p>Zomato Live</p>
+                    </li>
+                    <li>
+                        <p>Zomaland</p>
+                    </li>
+                    <li>
+                        <p>Weather Union</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer_Col">
+                <h6>For Restaurants</h6>
+                <ul>
+                    <li>
+                        <p>Partner With Us</p>
+                    </li>
+                    <li>
+                        <p>Apps For You</p>
+                    </li>
+                </ul>
+            </div>
+            <div class="Footer_Col">
+                <h6>Social Links</h6>
+                <div class="Footer_Icon">
+                    <i class="ri-linkedin-line"></i>
+                    <i class="ri-youtube-line"></i>
+                    <i class="ri-twitter-x-line"></i>
+                    <i class="ri-instagram-line"></i>
+                    <i class="ri-facebook-line"></i>
+                </div>
+                <div class="F_Payment">
+                    <img src="Image/p1.webp" alt="Payment-image" />
+                    <img src="Image/p2.webp" alt="Payment-image" />
+                </div>
+            </div>
+        </div>
+        <div class="Footer_Bottom">
+            <p>
+                By continuing past this page, you agree to our Terms of Serviece,
+                Cookie Policy, Privacy Policy and Content Policies. All trademarks are
+                properties of their respective owners. 2008-2025 &copy; Zomato™ Ltd.
+                All rights reserved.
+            </p>
+        </div>
+    </footer>
+
+    <!-- Swiper Slider Cdn -->
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+
+    <script src="./script.js"></script>
+    <script src="./Data.js"></script>
+
+
+    <script>
+        const Collection_wrapper = document.querySelector('.Restaurant_Cards_Wrapper');
+        function createRestaurantCard(Restaurants) {
+            Restaurants.forEach((restaurants) => {
+                restaurants.mealCategory.forEach((category) => {
+
+                    category.meals.forEach((meal)=>{
+                        var item = document.createElement('div');
+                    })
+                })
+            })
+        }
+        createRestaurantCard()
+    </script>
+</body>
+
+</html>
