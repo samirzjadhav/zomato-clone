@@ -7,9 +7,9 @@
     <link rel="stylesheet" href="style.css" />
     <!-- Remix Icon -->
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/remixicon/4.6.0/remixicon.css" />
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/css/splide.min.css">
     <!-- Swiper SLider Cdn -->
     <script src="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.js"></script>
-
     <title>Zomato Clone</title>
 </head>
 
@@ -27,13 +27,13 @@
             <li><a href="#">+91 97-38-38-38-38</a></li>
             <button class="btn">Login</button>
         </ul>
-        <!-- <i class="ri-menu-fill" id="SLider2_Show"></i> -->
-        <!-- <ul class="sidebar2">
+        <i class="ri-menu-fill" id="SLider2_Show"></i>
+        <ul class="Sidebar2">
             <li>Restaurants Service Hub</li>
             <li>Contact Us</li>
             <li id="LoginBtn3"><button>Login</button></li>
             <i class="ri-close-large-line" id="sidebar2_close"></i>
-        </ul> -->
+        </ul>
     </nav>
 
 
@@ -129,6 +129,102 @@
             </div>
         </div>
     </section>
+
+    <div class="Testimonials">
+        <div class="Testimonialls_title">
+            <h2>Restaurant Success Stories</h2>
+        </div>
+        <div class="splide Testimonials_Splide">
+            <div class="splide__track">
+                <ul class="splide__list">
+                    <li class="splide__slide">
+                        <div class="Testimonials_Item">
+                            <p>Zomato enabled me to restart my operations post-COVID when I had no hope of doing my
+                                business again. I'm grateful to the platform for helping me thrive - my online ordering
+                                business has even taken over my dining business!</p>
+                            <div class="Author">
+                                <div class="Author_Image">
+                                    <img src="Image/author.webp" alt="Author Image">
+                                </div>
+                                <div class="Author_Content">
+                                    <h5>Arshad Mante</h5>
+                                    <p>Owner - Khushboo Biryani, Shillong</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="Testimonials_Item">
+                            <p>Thanks to Zomato's invaluable support, our startup cloud kitchen has been doing wonders.
+                                Their dedication and reporting tools have been instrumental in our success.</p>
+                            <div class="Author">
+                                <div class="Author_Image">
+                                    <img src="Image/author2.webp" alt="Author Image">
+                                </div>
+                                <div class="Author_Content">
+                                    <h5>Vijay</h5>
+                                    <p>Owner - Birgo, Shillong</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <li class="splide__slide">
+                        <div class="Testimonials_Item">
+                            <p>Zomato helped us grow by 60% since registration. We’re now one of the biggest vegetarian
+                                joints in Ernakulam City.</p>
+                            <div class="Author">
+                                <div class="Author_Image">
+                                    <img src="Image/author3.webp" alt="Author Image">
+                                </div>
+                                <div class="Author_Content">
+                                    <h5>Sandeep K Mohan</h5>
+                                    <p>Owner - Mysore Raman Idli, Kerala</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- ✅ New Testimonial 4 -->
+                    <li class="splide__slide">
+                        <div class="Testimonials_Item">
+                            <p>Being on Zomato has given us amazing exposure. We’ve seen a 40% increase in new customers
+                                each month and are now expanding to more locations!</p>
+                            <div class="Author">
+                                <div class="Author_Image">
+                                    <img src="https://images.unsplash.com/photo-1607746882042-944635dfe10e"
+                                        alt="Author Image">
+                                </div>
+                                <div class="Author_Content">
+                                    <h5>Priya R</h5>
+                                    <p>Owner - Masala House, Mumbai</p>
+                                </div>
+                            </div>
+                        </div>
+                    </li>
+
+                    <!-- ✅ New Testimonial 5 -->
+                    <li class="splide__slide">
+                        <div class="Testimonials_Item">
+                            <p>Zomato’s insights and support team helped us refine our menu and promotions. The growth
+                                has been consistent, and our revenue has doubled in just 3 months!</p>
+                            <div class="Author">
+                                <div class="Author_Image">
+                                    <img src="https://images.unsplash.com/photo-1566753323558-f4e0952af115?q=80&w=1321&auto=format&fit=crop&ixlib=rb-4.1.0&ixid=M3wxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8fA%3D%3D"
+                                        alt="Author Image">
+                                </div>
+                                <div class="Author_Content">
+                                    <h5>Rakesh Kumar</h5>
+                                    <p>Owner - The Curry Corner, Bengaluru</p>
+                                </div>
+                            </div>
+                    </li>
+                </ul>
+            </div>
+        </div>
+    </div>
+
 
     <footer>
         <div class="Footer_Wrap">
@@ -228,9 +324,45 @@
 
     <!-- Swiper Slider Cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
+    <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
 
     <script src="./script.js"></script>
     <script src="./Data.js"></script>
+
+    <script>
+
+
+        const navbar2 = document.querySelectorAll('.Navabr2');
+        window.addEventListener('scroll', function () {
+            var scroll = window.scrollY;
+            if (scroll > 100) {
+                navbar2.classList.add()
+            }
+        })
+
+        document.addEventListener('DOMContentLoaded', function () {
+            var testimonialsSplide = new Splide('.Testimonials_Splide', {
+                type: 'loop',
+                perPage: 3,
+                autoplay: true,
+                rewind: true,
+                gap: '1rem',
+                pagination: false,
+                arrows: false,
+                breakpoints: {
+                    1600: { perPage: 2.5 },
+                    1400: { perPage: 2 },
+                    900: { perPage: 1.5 },
+                    768: { perPage: 1 },
+                    500: { perPage: 1 },
+                },
+            });
+
+            testimonialsSplide.mount();
+        });
+    </script>
+
+
 
 </body>
 
