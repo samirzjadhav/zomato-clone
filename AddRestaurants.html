@@ -322,6 +322,41 @@
         </div>
     </footer>
 
+    <!-- Login Form -->
+    <div class="ModelFrom">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <select name="" id="">
+                        <option value="">+ 91</option>
+                        <option value=""><span class="flag-icon">+ 93</span></option>
+                    </select>
+                    <input type="text" placeholder="Phone" class="phone-input" required />
+                </div>
+                <button class="otp-btn">Send One Time Password</button>
+                <div class="separator"><span>Or</span></div>
+                <button class="email-btn">
+                    <span class="icon"><img src="./Image/email.svg" alt="" /></span>
+                    Continue with Email
+                </button>
+                <button class="google-btn">
+                    <div class="icon"><img src="Image/google.jpg" alt="" /></div>
+                    Sign in with Google
+                </button>
+            </div>
+            <div class="modal-footer">
+                <p>
+                    New to Zomato ?
+                    <a href="#" id="openRegistration">Create Account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
     <!-- Swiper Slider Cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
     <script src="https://cdn.jsdelivr.net/npm/@splidejs/splide@4.1.4/dist/js/splide.min.js"></script>
@@ -331,12 +366,71 @@
 
     <script>
 
+        const login_form = document.querySelectorAll('.ModelForm');
+        const LoginBtn3 = document.querySelector('#LoginBtn3');
+        const LoginBtn = document.querySelector('.Navbar2 .menu button');
+        const closebtn = document.querySelector('.modal-header button');
+
+
+        LoginBtn.addEventListener('click', function () {
+            login_form.style.display = 'flex'
+        });
+
+        LoginBtn3.addEventListener('click', function () {
+            login_form.style.display = 'flex'
+        });
+
+        closebtn.addEventListener('click', function () {
+            login_form.style.display = 'none'
+        });
+
+
+        const showSidebar2 = document.getElementById('Sidebar2_show');
+        const closeSidebar2 = document.getElementById('Sidebar2_close');
+        const Sidebar2 = document.querySelector('.Sidebar2');
+
+        showSidebar2.addEventListener('click', function () {
+            Sidebar2.classList.add('Sidebar2_active');
+        });
+
+        closeSidebar2.addEventListener('click', function () {
+            Sidebar2.classList.remove('Sidebar2_active');
+        });
+
+        const nav = document.querySelector("nav");
+        const body = document.querySelector("body");
+        let search_box = document.querySelector(".search_wrapper");
+        let logo = document.querySelector(".logo a");
+        let menu_icons = document.querySelector(".menu li i");
+        let menu_links = document.querySelector(".menu li a");
+
+        window.addEventListener("scroll", () => {
+            if (window.scrollY > 500) {
+                nav.classList.add("sticky_nav");
+                search_box.classList.add("sticky_search_box");
+                logo.classList.add("sticky_menu");
+                menu_links.forEach((links) => {
+                    links.classList.add("sticky_menu");
+                });
+            } else {
+                nav.classList.remove("sticky_nav");
+                search_box.classList.remove("sticky_search_box");
+                logo.classList.remove("sticky_menu");
+                menu_links.forEach((links) => {
+                    links.classList.remove("sticky_menu");
+                });
+            }
+        });
+
+
 
         const navbar2 = document.querySelectorAll('.Navabr2');
         window.addEventListener('scroll', function () {
             var scroll = window.scrollY;
             if (scroll > 100) {
-                navbar2.classList.add()
+                navbar2.classList.add('sticky_nav')
+            } else {
+                navbar2.classList.remove('sticky_nav')
             }
         })
 

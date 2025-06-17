@@ -2572,3 +2572,548 @@ input:checked ~ .circle i {
 .Sidebar2_show {
   display: none;
 }
+
+/* MQ */
+
+@media screen and (max-width: 1500px) {
+  .Product_Container_menu li h2 {
+    font-size: 15px;
+  }
+}
+@media screen and (max-width: 1400px) {
+  section,
+  .product_Wrap {
+    padding: 120px 10%;
+  }
+
+  .search_wrapper {
+    width: 60%;
+  }
+
+  header {
+    height: 75vh;
+  }
+
+  footer {
+    padding: 120px 10%;
+    padding-bottom: 0;
+  }
+
+  .header2 {
+    height: 90vh;
+  }
+
+  .header2_Box {
+    width: 90%;
+    padding: 30px;
+    transform: translateY(-80px);
+  }
+
+  .Feature_Content h4 {
+    font-size: 1rem;
+  }
+
+  .Feature_Content span {
+    font-size: 0.9rem;
+  }
+
+  .Restaurants_Products_Content ul {
+    flex-direction: column !important;
+    align-items: start !important;
+  }
+
+  .time {
+    justify-content: flex-start;
+  }
+}
+
+@media screen and (max-width: 1300px) {
+  .Product_Container_menu li {
+    padding: 5px 12px;
+    width: 20%;
+    justify-content: center;
+  }
+
+  .Collections_title h6,
+  .Collections_title span,
+  .productitem_container_menu li h2 {
+    font-size: 0.7rem;
+  }
+
+  .Restaurant_Cards_wrapper {
+    grid-template-columns: repeat(3, 1fr);
+  }
+}
+
+@media screen and (max-width: 1200px) {
+  section,
+  .Product_Wrap {
+    padding: 120px 4%;
+  }
+
+  .search_wrapper {
+    width: 70%;
+  }
+
+  .Restaurant_info_wrapper {
+    padding: 40px 4%;
+  }
+
+  footer {
+    padding: 120px 4%;
+    padding-bottom: 0;
+  }
+
+  .Tab_Category {
+    padding: 50px 3%;
+  }
+
+  .Sectionbanner {
+    margin: 50px 4%;
+  }
+
+  nav {
+    padding: 0 4%;
+    gap: 30px;
+  }
+
+  nav .logo {
+    width: 130px;
+  }
+
+  nav .logo img {
+    width: 100%;
+  }
+
+  .search_wrapper {
+    width: 60%;
+  }
+
+  .header_section .Sidebar .Sidebar_menu a {
+    font-size: 0.9rem;
+  }
+
+  .Footer_Bottom p {
+    line-height: 1.8rem;
+    font-size: 0.9rem;
+  }
+
+  .Collections_title h6,
+  .Collections_title span,
+  .Product_Container_menu li h2 {
+    font-size: 0.6rem;
+  }
+
+  .Product_Container_menu li {
+    padding: 12px;
+    width: 20%;
+    justify-content: center;
+    height: auto;
+  }
+
+  .Reviews_Box a,
+  .Reviews_Box i {
+    font-size: 0.9rem;
+  }
+
+  .Product_Photo_Container_Wrap {
+    grid-template-columns: repeat(5, 1fr);
+  }
+
+  .Product_Photo_Container_Wrap {
+    width: 90%;
+  }
+
+  .Sidebar_menu {
+    padding: 0 8px;
+    align-items: center;
+  }
+
+  .header2 {
+    height: 100vh;
+    padding: 80px 8%;
+  }
+
+  .header2_Box {
+    width: 100%;
+  }
+
+  .Navbar2 .logo {
+    width: 12%;
+  }
+}
+
+@media screen and(max-width:900px) {
+  .bars {
+    display: block;
+    color: #1e1e1e1e;
+    font-size: 1.8rem;
+    font-weight: 500;
+  }
+
+  .menu {
+    display: none;
+  }
+
+  .menu li a {
+    color: var(--black-color);
+  }
+
+  .show_menu {
+    height: 100vh;
+  }
+
+  .hero_content h1 {
+    font-size: 1.5rem;
+  }
+
+  .search_wrapper {
+    width: 88%;
+  }
+
+  .Collection_title {
+    gap: 0;
+  }
+
+  .banner {
+    gap: 0;
+  }
+
+  .banner_Input_Box button a {
+    font-size: 0.9rem;
+  }
+
+  .Sectionbanner {
+    height: 150px;
+  }
+
+  .Restaurants_Product_Image {
+    height: 140px;
+  }
+
+  .Restaurants_Products_Content ul {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .time {
+    justify-content: flex-start;
+  }
+
+  .Restaurant_info_wrapper .Restaurant_info {
+    flex-direction: column;
+  }
+
+  .Restaurant_info_wrapper .Restaurant_info .restaurant_rating_info {
+    margin: 10px 0;
+  }
+
+  .Product_Container_menu,
+  .Product_Container_menu li {
+    width: 100%;
+  }
+
+  .Restaurants_Products_Content ul li p {
+    font-size: 0.8rem;
+  }
+
+  .Restaurants_Products_Content ul li h4 {
+    font-size: 1rem;
+  }
+
+  .header_section .search_wrapper {
+    display: none !important;
+  }
+
+  .nav .logo {
+    width: 160px;
+  }
+
+  .BookingSlot label {
+    padding: 7px 30px;
+  }
+
+  .header2_Box {
+    transform: translate(0);
+    gap: 10px;
+  }
+
+  .Features_Wrap {
+    gap: 20px;
+  }
+
+  .header2_Box_Content ul li span {
+    font-size: 0.9rem;
+  }
+
+  .header2_Box_info p {
+    font-size: 0.8rem;
+  }
+
+  .Feature_Content span {
+    font-size: 0.8rem;
+  }
+
+  .Features_title h2 {
+    font-size: 1.5rem !important;
+  }
+
+  .Feature_Icon img {
+    width: 80px;
+    height: 80px;
+  }
+
+  .Navbar2 .logo {
+    width: 18%;
+  }
+
+  .Navbar2 {
+    z-index: 999;
+  }
+
+  #Sidebar2_show {
+    display: block;
+    font-size: 1.8rem;
+    font-weight: 600;
+    z-index: 99;
+    color: var(--black-color);
+  }
+
+  .Sidebar2 {
+    display: block;
+    position: absolute;
+    right: -100%;
+    top: 0;
+    min-height: 100vh;
+    width: 35%;
+    padding: 80px 20px;
+    display: flex;
+    flex-direction: column;
+    transition: var(--transition);
+    align-items: start;
+    gap: 10px;
+    z-index: 99;
+    background-color: var(--white-color);
+  }
+
+  .Sidebar2_active {
+    right: 0 !important;
+  }
+
+  .Sidebar2 li {
+    font-size: 1rem;
+    font-weight: 500;
+    color: var(--bg-color);
+  }
+
+  .Sidebar2 li button {
+    background-color: rgb(0, 140, 225);
+    color: var(--white-color);
+    padding: 6px 15px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1rem;
+    cursor: pointer;
+  }
+
+  .Sidebar2 i {
+    position: absolute;
+    top: 25px;
+    right: 25px;
+    font-size: 1.5rem;
+    font-weight: 600;
+  }
+
+  .sticky_nav button {
+    border: 1px solid var(--white-color) !important;
+    color: var(--white-color) !important;
+  }
+
+  .header_section {
+    min-height: 8vh;
+  }
+}
+
+@media screen and(max-width:768px) {
+  .search_wrapper {
+    width: 100%;
+  }
+
+  .Hero_Image {
+    width: 240px;
+  }
+
+  .Collection_title {
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 30px;
+  }
+
+  .Collection__Wrap,
+  .Popular-Locations_Wrap,
+  .Footer_Wrap,
+  .Product_Wrap {
+    grid-template-columns: repeat(2, 1fr);
+    gap: 20px;
+  }
+
+  .Popular-Locations_Wrap {
+    gap: 20px;
+  }
+
+  .banner_image {
+    display: none;
+  }
+
+  .banner_title {
+    width: 100%;
+  }
+
+  .banner_Input_Box {
+    width: 60%;
+  }
+
+  .Footer_Bottom p {
+    font-size: 0.9rem;
+  }
+
+  .restaurant_contact_info,
+  .restaurant_buttons,
+  .Restaurant_info_wrapper .Restaurant_info .restaurant_rating_info,
+  .Product_Container_menu,
+  .Product_Container_menu li {
+    flex-wrap: wrap;
+    height: auto;
+  }
+
+  .Restaurant_info_wrapper .Restaurant_info .restaurant_rating_info p strong,
+  .Restaurant_info_wrapper .Restaurant_info .restaurant_rating_info p span {
+    font-size: 0.6rem;
+  }
+
+  .Restaurant_info_wrapper .Restaurant_info .restaurant_rating_info p span {
+    align-items: center;
+    justify-content: center;
+  }
+
+  .Reviews_Top {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .Reviews_Box_Right {
+    align-items: flex-start;
+    justify-content: flex-start;
+  }
+
+  nav .logo {
+    width: 130px;
+    height: auto;
+  }
+
+  .BookDemoClass .Bookatable_wrapper .bookingDetails .bookingdetails_header,
+  .BookDemoClass .Bookatable_wrapper .SlotDetails .BookingSlot_wrapper,
+  .offerDetails .Offer_wrapper,
+  .banner_Input_Box {
+    flex-wrap: wrap;
+  }
+
+  .banner_Input_Box button,
+  .banner_input_box input {
+    width: 100%;
+  }
+
+  .BookingSlot input {
+    display: none;
+  }
+
+  .BookDemoClass .Bookatable_wrapper .SlotDetails .BookingSlot_wrapper {
+    gap: 10px;
+  }
+
+  .header2 {
+    padding: 80px 2%;
+  }
+
+  .header_Content p {
+    font-size: 1rem;
+  }
+
+  .header_Content h4 {
+    font-size: 2rem;
+    padding-bottom: 10px;
+  }
+
+  .Features_Wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-content h1 {
+    font-size: 1rem;
+  }
+
+  .Hero_Image {
+    width: 200px;
+  }
+
+  header {
+    padding: 0px 2%;
+  }
+
+  .search_wrapper_icon {
+    width: 50px;
+    font-size: 1rem;
+  }
+
+  .input_box input {
+    font-size: 0.9rem;
+  }
+
+  .search_box a {
+    font-size: 0.9rem;
+  }
+
+  .search_box div svg {
+    width: 18px;
+    height: 18px;
+  }
+
+  .product_Wrap {
+    flex-direction: column;
+  }
+
+  .Collection__Wrap {
+    gap: 10px;
+  }
+
+  .Popular-Locations_Wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Popular_Locations_title p {
+    font-size: 2rem;
+  }
+
+  .banner_Input_Box {
+    width: 100%;
+  }
+
+  .Footer_Wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .F_Payment img {
+    width: 35%;
+  }
+
+  .Footer_Bottom p {
+    font-size: 0.8rem;
+  }
+
+  .Collection__Wrap,
+  .product_Wrap {
+    grid-template-columns: repeat(1, 1fr);
+  }
+}
