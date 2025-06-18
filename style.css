@@ -156,12 +156,17 @@ nav .search_wrapper {
   transition: var(--transition2);
 }
 
+.Sidebar_active {
+  height: 100vh;
+}
+
 .Sidebar_Top {
   width: 100%;
   display: flex;
   justify-content: space-between;
   align-items: center;
   gap: 30px;
+  padding: 10px 4%;
 }
 
 .Sidebar_Image {
@@ -188,16 +193,21 @@ nav .search_wrapper {
   gap: 30px;
 }
 
-.Sidebar_menu li a {
+.Sidebar_menu ul li {
+  margin-bottom: 20px;
+}
+
+.Sidebar_menu ul li a {
   color: #696969;
   text-transform: capitalize;
   font-size: 1.1rem;
-  font-weight: 300;
+  font-weight: 400;
   letter-spacing: 0.5px;
   transition: var(--transition);
+  cursor: pointer;
 }
 
-.Sidebar_menu li a:hover {
+.Sidebar_menu ul li a:hover {
   color: rgb(28, 28, 28);
 }
 
@@ -601,7 +611,7 @@ select {
 /* Product Wrap */
 
 .Product_Wrap {
-  display: flex;
+  display: grid;
   grid-template-columns: repeat(3, 1fr);
   gap: 30px;
 }
@@ -1218,6 +1228,10 @@ footer {
   color: var(--white-color);
   font-size: 0.8rem;
   font-weight: 600;
+}
+
+.Restaurants_Products_Content ul:nth-child(2) li:nth-child(2) span {
+  color: black;
 }
 
 .Restaurants_Products_Content li i {
@@ -2601,6 +2615,9 @@ input:checked ~ .circle i {
   .Product_Container_menu li h2 {
     font-size: 15px;
   }
+  #Sidebar2_show {
+    display: none;
+  }
 }
 @media screen and (max-width: 1400px) {
   section,
@@ -2763,18 +2780,18 @@ input:checked ~ .circle i {
   .Navbar2 .logo {
     width: 12%;
   }
-
-  #Sidebar2_show {
-    display: none;
-  }
 }
 
 @media screen and (max-width: 900px) {
   .bars {
     display: block;
-    color: #1e1e1e1e;
+    color: var(--black-color);
     font-size: 1.8rem;
     font-weight: 500;
+  }
+
+  .input_box {
+    width: 60%;
   }
 
   .menu {
@@ -2801,6 +2818,10 @@ input:checked ~ .circle i {
     gap: 0;
   }
 
+  .Collections_title {
+    flex-direction: column;
+  }
+
   .banner {
     gap: 0;
   }
@@ -2811,6 +2832,10 @@ input:checked ~ .circle i {
 
   .Sectionbanner {
     height: 150px;
+  }
+
+  .Tabs_Restaurant {
+    margin-top: 70px;
   }
 
   .Restaurants_Product_Image {
@@ -2976,7 +3001,7 @@ input:checked ~ .circle i {
     gap: 30px;
   }
 
-  .Collection__Wrap,
+  .Collections_Wrap,
   .Popular-Locations_Wrap,
   .Footer_Wrap,
   .Product_Wrap {
@@ -3031,6 +3056,25 @@ input:checked ~ .circle i {
   .Reviews_Box_Right {
     align-items: flex-start;
     justify-content: flex-start;
+  }
+
+  .Reviews_Description {
+    width: 90%;
+  }
+
+  .BookDemoClass .BookaTable_wrapper {
+    width: 100%;
+  }
+
+  .BookDemoClass .BookaTable_wrapper .SlotDetails .BookingSlot_wrapper {
+    display: flex;
+    gap: 30px;
+    flex-direction: column;
+  }
+
+  .checkout_section {
+    display: flex;
+    flex-direction: column;
   }
 
   nav .logo {
@@ -3093,6 +3137,10 @@ input:checked ~ .circle i {
     padding: 0px 2%;
   }
 
+  .Sidebar_menu-top {
+    margin-top: 30px;
+  }
+
   .search_wrapper_icon {
     width: 50px;
     font-size: 1rem;
@@ -3115,7 +3163,7 @@ input:checked ~ .circle i {
     flex-direction: column;
   }
 
-  .Collection__Wrap {
+  .Collections_Wrap {
     gap: 10px;
   }
 
@@ -3133,6 +3181,23 @@ input:checked ~ .circle i {
 
   .Footer_Wrap {
     grid-template-columns: repeat(1, 1fr);
+    text-align: center;
+  }
+
+  .Sectionbanner {
+    width: 90% !important;
+  }
+
+  .Footer_Col {
+    align-items: center;
+  }
+
+  .Footer_Icon {
+    justify-content: center;
+  }
+
+  .F_Payment {
+    align-items: center;
   }
 
   .F_Payment img {
@@ -3143,9 +3208,13 @@ input:checked ~ .circle i {
     font-size: 0.8rem;
   }
 
-  .Collection__Wrap,
-  .product_Wrap {
+  .Collections_Wrap,
+  .Product_Wrap {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .productitem_container_menu {
+    width: 100%;
   }
 
   .Sidebar_Image {
@@ -3168,6 +3237,47 @@ input:checked ~ .circle i {
   .Product_Container_menu_Content p,
   .Product_Container_menu_Content span {
     font-size: 0.6rem;
+  }
+
+  .Product_Container_wrapper_list {
+    display: flex;
+    gap: 20px;
+    margin-top: 30px;
+  }
+
+  .Product_Container_menu_Item {
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    text-align: center;
+  }
+
+  .Product_Container_menu_Image {
+    min-width: 280px;
+    height: 200px;
+    border-radius: 12px;
+    position: relative;
+    overflow: hidden;
+  }
+
+  .Product_Photo_Container {
+    display: flex !important;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .Reviews_Item {
+    flex-direction: column;
+  }
+
+  .Reviews_Box {
+    width: 100%;
+  }
+
+  .Reviews_Box_left,
+  .Reviews_Box_right {
+    width: 100%;
+    align-items: start;
   }
 
   .Product_Photo_Container_Wrap {
@@ -3242,7 +3352,7 @@ input:checked ~ .circle i {
     width: 100%;
   }
 
-  .Collection_wrap a {
+  .Collection_Wrap a {
     width: 100%;
   }
 
@@ -3252,5 +3362,20 @@ input:checked ~ .circle i {
 
   .Navbar2 .menu {
     display: none;
+  }
+
+  .banner {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+  }
+
+  .banner_title h2 {
+    font-size: 1.3rem !important;
+  }
+
+  .banner_title p {
+    font-size: 0.8rem !important;
   }
 }
