@@ -852,62 +852,67 @@
 
 
 
-        const Login_Form = document.querySelector(".ModelForm");
+        document.addEventListener("DOMContentLoaded", () => {
+            const loginForm = document.querySelector(".ModelForm");
+            const registrationForm = document.querySelector(".Registration_form");
 
-        const LoginBtn = document.querySelector("#LoginBtn");
-        const LoginBtn2 = document.querySelector("#LoginBtn2");
-        const NavSigninbtn = document.querySelector("#NavSigninbtn");
-        const NavLoginbtn = document.querySelector("#NavLoginbtn");
-        const closebtn = document.querySelector(".modal-header button");
+            const loginBtn = document.querySelector("#LoginBtn");
+            const loginBtn2 = document.querySelector("#LoginBtn2");
+            const navLoginBtn = document.querySelector("#NavLoginbtn");
+            const navSignInBtn = document.querySelector("#NavSigninbtn");
 
-        const Registration_form = document.querySelector(".Registration_form");
-        const close_btn2 = document.querySelector("#SignUpBtn");
-        console.log(close_btn2);
-        const closebtn2 = document.querySelector("#close-btn2");
-        const openlogin = document.querySelector("#openlogin");
-        const openRegistration = document.querySelector("#openRegistration");
+            const closeLoginBtn = document.querySelector(".modal-header button");
+            const closeRegistrationBtn = document.querySelector("#close-btn2");
 
-        closebtn.addEventListener("click", function () {
-            Login_Form.style.display = "none";
+            const openLoginLink = document.querySelector("#openlogin");
+            const openRegistrationLink = document.querySelector("#openRegistration");
+            const signUpBtn = document.querySelector("#SignUpBtn");
+
+            // ✅ Show Login Form
+            loginBtn?.addEventListener("click", () => {
+                loginForm.style.display = "flex";
+            });
+
+            navLoginBtn?.addEventListener("click", () => {
+                loginForm.style.display = "flex";
+            });
+
+            navSignInBtn?.addEventListener("click", () => {
+                registrationForm.style.display = "flex";
+            });
+
+            // ✅ Show Registration Form
+            loginBtn2?.addEventListener("click", () => {
+                registrationForm.style.display = "flex";
+            });
+
+            signUpBtn?.addEventListener("click", () => {
+                registrationForm.style.display = "flex";
+            });
+
+            // ✅ Close Login Form
+            closeLoginBtn?.addEventListener("click", () => {
+                loginForm.style.display = "none";
+            });
+
+            // ✅ Close Registration Form
+            closeRegistrationBtn?.addEventListener("click", () => {
+                registrationForm.style.display = "none";
+            });
+
+            // ✅ Switch to Login Form
+            openLoginLink?.addEventListener("click", () => {
+                registrationForm.style.display = "none";
+                loginForm.style.display = "flex";
+            });
+
+            // ✅ Switch to Registration Form
+            openRegistrationLink?.addEventListener("click", () => {
+                registrationForm.style.display = "flex";
+                loginForm.style.display = "none";
+            });
         });
 
-        LoginBtn.addEventListener("click", function () {
-            Login_Form.style.display = "flex";
-        });
-
-        NavSigninbtn.addEventListener("click", function () {
-            Login_form.style.display = "flex";
-        });
-
-        NavSigninbtn.addEventListener("click", function () {
-            Login_form.style.display = "flex";
-        });
-
-        LoginBtn2.addEventListener("click", function () {
-            Registration_form.style.display = "flex";
-        });
-
-        closebtn2.addEventListener("click", function () {
-            Registration_form.style.display = "none";
-        });
-
-        close_btn2.addEventListener("click", function () {
-            Registration_form.style.display = "flex";
-        });
-
-        NavSigninbtn.addEventListener("click", function () {
-            Registration_form.style.display = "flex";
-        });
-
-        openlogin.addEventListener("click", function () {
-            Registration_form.style.display = "none";
-            Login_form.style.display = "flex";
-        });
-
-        openRegistration.addEventListener("click", function () {
-            Registration_form.style.display = "flex";
-            Login_form.style.display = "none";
-        });
     </script>
 </body>
 
