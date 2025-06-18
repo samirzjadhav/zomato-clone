@@ -74,6 +74,75 @@
     </div>
 
 
+    <!-- Login Form -->
+    <div class="ModelForm">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <button class="close-btn">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <select name="" id="">
+                        <option value="">+ 91</option>
+                        <option value=""><span class="flag-icon">+ 93</span></option>
+                    </select>
+                    <input type="text" placeholder="Phone" class="phone-input" required />
+                </div>
+                <button class="otp-btn">Send One Time Password</button>
+                <div class="separator"><span>Or</span></div>
+                <button class="email-btn">
+                    <span class="icon"><img src="./Image/email.svg" alt="" /></span>
+                    Continue with Email
+                </button>
+                <button class="google-btn">
+                    <div class="icon"><img src="Image/google.jpg" alt="" /></div>
+                    Sign in with Google
+                </button>
+            </div>
+            <div class="modal-footer">
+                <p>
+                    New to Zomato ?
+                    <a href="#" id="openRegistration">Create Account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+    <!-- Registration Form -->
+    <div class="ModelForm Registration_form">
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Registration</h2>
+                <button class="close-btn" id="close-btn2">&times;</button>
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <input type="text" placeholder="Full Name" class="phone-input" required />
+                </div>
+                <div class="input-group">
+                    <input type="text" placeholder="Email" class="phone-input" required />
+                </div>
+                <button class="otp-btn">Send One Time Password</button>
+                <div class="separator"><span>Or</span></div>
+                <p id="agreement">
+                    <input type="checkbox" /> I agree to Zomato's Terms of Service,
+                    Policy and Content Policies
+                </p>
+                <div class="google-btn">
+                    <div class="icon"><img src="Image/google.jpg" alt="" /></div>
+                    Sign in with Google
+                </div>
+                <div class="modal-footer">
+                    <p>
+                        Already have an account?
+                        <a href="#" id="openlogin">Log in</a>
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+
     <section class="Collection">
         <p><a href="index.html" id="Home">Home</a> / <span>Collections</span></p>
         <div class="Collection_Banner">
@@ -303,6 +372,69 @@
                 window.loaction.href = `Restaurant-info.html?id=${restaurantId}`
             })
         })
+
+
+        document.addEventListener("DOMContentLoaded", () => {
+            const loginForm = document.querySelector(".ModelForm");
+            const registrationForm = document.querySelector(".Registration_form");
+
+            const loginBtn = document.querySelector("#LoginBtn");
+            const loginBtn2 = document.querySelector("#LoginBtn2");
+            const navLoginBtn = document.querySelector("#NavLoginbtn");
+            const navSignInBtn = document.querySelector("#NavSigninbtn");
+
+            const closeLoginBtn = document.querySelector(".modal-header button");
+            const closeRegistrationBtn = document.querySelector("#close-btn2");
+
+            const openLoginLink = document.querySelector("#openlogin");
+            const openRegistrationLink = document.querySelector("#openRegistration");
+            const signUpBtn = document.querySelector("#SignUpBtn");
+
+            // ✅ Show Login Form
+            loginBtn?.addEventListener("click", () => {
+                loginForm.style.display = "flex";
+            });
+
+            navLoginBtn?.addEventListener("click", () => {
+                loginForm.style.display = "flex";
+            });
+
+            navSignInBtn?.addEventListener("click", () => {
+                registrationForm.style.display = "flex";
+            });
+
+            // ✅ Show Registration Form
+            loginBtn2?.addEventListener("click", () => {
+                registrationForm.style.display = "flex";
+            });
+
+            signUpBtn?.addEventListener("click", () => {
+                registrationForm.style.display = "flex";
+            });
+
+            // ✅ Close Login Form
+            closeLoginBtn?.addEventListener("click", () => {
+                loginForm.style.display = "none";
+            });
+
+            // ✅ Close Registration Form
+            closeRegistrationBtn?.addEventListener("click", () => {
+                registrationForm.style.display = "none";
+            });
+
+            // ✅ Switch to Login Form
+            openLoginLink?.addEventListener("click", () => {
+                registrationForm.style.display = "none";
+                loginForm.style.display = "flex";
+            });
+
+            // ✅ Switch to Registration Form
+            openRegistrationLink?.addEventListener("click", () => {
+                registrationForm.style.display = "flex";
+                loginForm.style.display = "none";
+            });
+        });
+
 
     </script>
 </body>
