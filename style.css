@@ -104,9 +104,10 @@ nav {
 .sticky_nav {
   position: fixed;
   top: 0;
-  left: 0;
   width: 100%;
-  background-color: var(--white-color);
+  background-color: white; /* or any background */
+  z-index: 1000;
+  box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
 }
 
 .sticky_menu {
@@ -405,7 +406,7 @@ header {
 
 /* Model Form */
 
-.ModelFrom {
+.ModelForm {
   position: fixed;
   top: 0;
   left: 0;
@@ -418,7 +419,7 @@ header {
   display: none;
 }
 
-.ModelFrom:after {
+.ModelForm:after {
   position: fixed;
   content: "";
   top: 0;
@@ -2273,6 +2274,27 @@ input:checked ~ .circle i {
 
 /*====== add restaurant page =======*/
 
+.sticky_nav {
+  box-shadow: 5px 5px 10px #3333330e !important;
+}
+
+.sticky_nav .logo img:nth-child(1) {
+  display: none;
+}
+
+.sticky_nav ul li a {
+  color: rgb(37, 111, 239);
+}
+
+.sticky_nav button {
+  border: 1px solid var(--black-color) !important;
+  color: var(--black-color) !important;
+}
+
+.sticky_nav .logo img:nth-child(2) {
+  display: block;
+}
+
 .Navbar2 {
   height: 80px;
   position: fixed;
@@ -2569,8 +2591,8 @@ input:checked ~ .circle i {
   display: none;
 }
 
-.Sidebar2_show {
-  display: none;
+.Sidebar2_active {
+  display: block;
 }
 
 /* MQ */
@@ -2741,9 +2763,13 @@ input:checked ~ .circle i {
   .Navbar2 .logo {
     width: 12%;
   }
+
+  #Sidebar2_show {
+    display: none;
+  }
 }
 
-@media screen and(max-width:900px) {
+@media screen and (max-width: 900px) {
   .bars {
     display: block;
     color: #1e1e1e1e;
@@ -2900,10 +2926,11 @@ input:checked ~ .circle i {
     right: 0 !important;
   }
 
-  .Sidebar2 li {
+  .Sidebar2 li a {
     font-size: 1rem;
     font-weight: 500;
     color: var(--bg-color);
+    cursor: pointer;
   }
 
   .Sidebar2 li button {
@@ -2934,7 +2961,7 @@ input:checked ~ .circle i {
   }
 }
 
-@media screen and(max-width:768px) {
+@media screen and (max-width: 768px) {
   .search_wrapper {
     width: 100%;
   }
@@ -3047,6 +3074,10 @@ input:checked ~ .circle i {
   .Features_Wrap {
     grid-template-columns: repeat(1, 1fr);
   }
+
+  .Navbar2 .menu {
+    display: none;
+  }
 }
 
 @media screen and (max-width: 480px) {
@@ -3115,5 +3146,111 @@ input:checked ~ .circle i {
   .Collection__Wrap,
   .product_Wrap {
     grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Sidebar_Image {
+    width: 150px;
+  }
+
+  .product_container_wrapper {
+    flex-direction: column;
+  }
+
+  .Product_Container_Content,
+  .product_container_wrapper_list {
+    width: 100%;
+  }
+
+  .Product_Container_Menu_Container h4 {
+    font-size: 0.9rem !important;
+  }
+
+  .Product_Container_menu_Content p,
+  .Product_Container_menu_Content span {
+    font-size: 0.6rem;
+  }
+
+  .Product_Photo_Container_Wrap {
+    grid-template-columns: repeat(2, 1fr);
+  }
+
+  .Tab_Restaurant {
+    flex-wrap: wrap;
+  }
+
+  section {
+    padding: 40px 4%;
+  }
+
+  .header_Content {
+    padding-top: 120px;
+  }
+
+  .header2_Box {
+    flex-direction: column;
+    gap: 30px;
+    transform: translateY(45px);
+  }
+
+  .Feature_title h2 {
+    text-align: center;
+  }
+
+  .Feature_title::after {
+    display: none;
+  }
+
+  .header2_Box_Content {
+    width: 100%;
+  }
+
+  .header2_Box_Video {
+    width: 100%;
+  }
+
+  .Testimonials_Item {
+    height: auto;
+  }
+
+  .Testimonials_Item p {
+    font-size: 0.8rem;
+    line-height: 1.5rem;
+  }
+
+  .header2_Box_Content ul {
+    grid-template-columns: repeat(1, 1fr);
+    gap: 30px;
+  }
+
+  .header_Content {
+    padding-top: 250px;
+  }
+
+  .header_Content p {
+    font-size: 0.8rem;
+  }
+
+  .Features {
+    margin-top: 50px;
+  }
+
+  .Sidebar2 {
+    width: 75%;
+  }
+
+  .Collection_Banner_Info {
+    width: 100%;
+  }
+
+  .Collection_wrap a {
+    width: 100%;
+  }
+
+  .Restaurant_Cards_wrapper {
+    grid-template-columns: repeat(1, 1fr);
+  }
+
+  .Navbar2 .menu {
+    display: none;
   }
 }

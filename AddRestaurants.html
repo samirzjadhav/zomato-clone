@@ -27,56 +27,92 @@
             <li><a href="#">+91 97-38-38-38-38</a></li>
             <button class="btn">Login</button>
         </ul>
-        <i class="ri-menu-fill" id="SLider2_Show"></i>
+        <i class="ri-menu-fill" id="Sidebar2_show"></i>
         <ul class="Sidebar2">
-            <li>Restaurants Service Hub</li>
-            <li>Contact Us</li>
+            <li><a href="#">Restaurants Service Hub</a></li>
+            <li> <a href="#">Contact Us</a></li>
             <li id="LoginBtn3"><button>Login</button></li>
-            <i class="ri-close-large-line" id="sidebar2_close"></i>
+            <i class="ri-close-large-line" id="Sidebar2_close"></i>
         </ul>
     </nav>
+
+    <!-- Login Form -->
+    <div class="ModelForm"> <!-- Corrected class name -->
+        <div class="modal">
+            <div class="modal-header">
+                <h2>Login</h2>
+                <button class="close-btn">&times;</button> <!-- Use this class in JS -->
+            </div>
+            <div class="modal-body">
+                <div class="input-group">
+                    <select>
+                        <option value="">+91</option>
+                        <option value="">+93</option> <!-- Removed <span> inside -->
+                    </select>
+                    <input type="text" placeholder="Phone" class="phone-input" required />
+                </div>
+                <button class="otp-btn">Send One Time Password</button>
+                <div class="separator"><span>Or</span></div>
+                <button class="email-btn">
+                    <span class="icon"><img src="./Image/email.svg" alt="Email icon" /></span>
+                    Continue with Email
+                </button>
+                <button class="google-btn">
+                    <div class="icon"><img src="Image/google.jpg" alt="Google icon" /></div>
+                    Sign in with Google
+                </button>
+            </div>
+            <div class="modal-footer">
+                <p>
+                    New to Zomato?
+                    <a href="#" id="openRegistration">Create Account</a>
+                </p>
+            </div>
+        </div>
+    </div>
+
 
 
     <header class="header2">
         <div class="header_Content">
             <h4>Partner with Zomato</h4>
-            <h4>and Grow your business</h4>
-            <p>0% commission for the 1st month for new Restaurants partners in selected cities</p>
+            <h4>and grow your business</h4>
+            <p>0% commission for the first month for new restaurant partners in selected cities.</p>
         </div>
+
         <div class="header2_Box">
             <div class="header2_Box_Content">
-                <h4>Get Started - It only takes 10 minutes</h4>
-                <p>Please be ready with the following for a smooth registration</p>
+                <h4>Get Started – It only takes 10 minutes</h4>
+                <p>Have the following documents ready for a smooth registration process:</p>
                 <ul>
                     <li>
                         <div class="header2_Box_Icon">
                             <i class="ri-check-line"></i>
                         </div>
-                        <span>Pan Card</span>
+                        <span>PAN Card</span>
                     </li>
                     <li>
                         <div class="header2_Box_Icon">
                             <i class="ri-check-line"></i>
                         </div>
-                        <span>Menu details and one dish Image</span>
+                        <span>Menu details and one dish image</span>
                     </li>
                     <li>
                         <div class="header2_Box_Icon">
                             <i class="ri-check-line"></i>
                         </div>
                         <div class="header2_Box_Info">
-                            <span>GST number, information</span>
-                            <p>Reruire a GST? <a href="#">Apply here</a></p>
+                            <span>GST number and information</span>
+                            <p>Don’t have a GST? <a href="#">Apply here</a></p>
                         </div>
                     </li>
-
                     <li>
                         <div class="header2_Box_Icon">
                             <i class="ri-check-line"></i>
                         </div>
                         <div class="header2_Box_Info">
-                            <span>FSSA License</span>
-                            <p>Don's have <a href="#">Apply here</a></p>
+                            <span>FSSAI License</span>
+                            <p>Don’t have one? <a href="#">Apply here</a></p>
                         </div>
                     </li>
                     <li>
@@ -87,13 +123,16 @@
                     </li>
                 </ul>
             </div>
+
             <div class="header2_Box_Video">
                 <video loop autoplay controls>
-                    <source src="Image/zomatovideo.mp4">
+                    <source src="Image/zomatovideo.mp4" type="video/mp4">
+                    Your browser does not support the video tag.
                 </video>
             </div>
         </div>
     </header>
+
 
     <section class="Features">
         <div class="Features_title Section_title">
@@ -101,34 +140,37 @@
         </div>
         <div class="Features_Wrap">
             <div class="Features_item">
-                <div class="Section_Image Fatures_icons">
-                    <img src="Image/Feature_Icon1.avif" alt="">
+                <div class="Features_icons Section_Image">
+                    <img src="Image/Feature_Icon1.avif" alt="Attract New Customers">
                 </div>
                 <div class="Feature_Content">
                     <h4>Attract New Customers</h4>
-                    <span>Reach the millions of people ordering on Zomato</span>
+                    <span>Reach millions of people ordering on Zomato.</span>
                 </div>
             </div>
+
             <div class="Features_item">
-                <div class="Feature_icon Section_Image">
-                    <img src="Image/Feature_Icon2.avif" alt="">
+                <div class="Features_icons Section_Image">
+                    <img src="Image/Feature_Icon2.avif" alt="Doorstep Delivery">
                 </div>
                 <div class="Feature_Content">
-                    <h4>Doorstep delivery convenience</h4>
-                    <span>Easily get your orders delivered through our trained delivery partners</span>
+                    <h4>Doorstep Delivery Convenience</h4>
+                    <span>Get your orders delivered seamlessly through our trained delivery partners.</span>
                 </div>
             </div>
+
             <div class="Features_item">
-                <div class="Feature_icon Section_Image">
-                    <img src="Image/Feature_Icon3.avif" alt="">
+                <div class="Features_icons Section_Image">
+                    <img src="Image/Feature_Icon3.avif" alt="Hotline Support">
                 </div>
                 <div class="Feature_Content">
-                    <h4>Hotline Supports</h4>
-                    <span>On-call support for any issues or growth consultationss</span>
+                    <h4>Hotline Support</h4>
+                    <span>On-call support for issues or business growth consultations.</span>
                 </div>
             </div>
         </div>
     </section>
+
 
     <div class="Testimonials">
         <div class="Testimonialls_title">
@@ -137,6 +179,7 @@
         <div class="splide Testimonials_Splide">
             <div class="splide__track">
                 <ul class="splide__list">
+                    <!-- Testimonial 1 -->
                     <li class="splide__slide">
                         <div class="Testimonials_Item">
                             <p>Zomato enabled me to restart my operations post-COVID when I had no hope of doing my
@@ -154,6 +197,7 @@
                         </div>
                     </li>
 
+                    <!-- Testimonial 2 -->
                     <li class="splide__slide">
                         <div class="Testimonials_Item">
                             <p>Thanks to Zomato's invaluable support, our startup cloud kitchen has been doing wonders.
@@ -170,6 +214,7 @@
                         </div>
                     </li>
 
+                    <!-- Testimonial 3 -->
                     <li class="splide__slide">
                         <div class="Testimonials_Item">
                             <p>Zomato helped us grow by 60% since registration. We’re now one of the biggest vegetarian
@@ -186,7 +231,7 @@
                         </div>
                     </li>
 
-                    <!-- ✅ New Testimonial 4 -->
+                    <!-- Testimonial 4 -->
                     <li class="splide__slide">
                         <div class="Testimonials_Item">
                             <p>Being on Zomato has given us amazing exposure. We’ve seen a 40% increase in new customers
@@ -204,7 +249,7 @@
                         </div>
                     </li>
 
-                    <!-- ✅ New Testimonial 5 -->
+                    <!-- Testimonial 5 -->
                     <li class="splide__slide">
                         <div class="Testimonials_Item">
                             <p>Zomato’s insights and support team helped us refine our menu and promotions. The growth
@@ -219,6 +264,7 @@
                                     <p>Owner - The Curry Corner, Bengaluru</p>
                                 </div>
                             </div>
+                        </div>
                     </li>
                 </ul>
             </div>
@@ -290,7 +336,7 @@
                 <h6>For Restaurants</h6>
                 <ul>
                     <li>
-                        <p>Partner With Us</p>
+                        <p> <a href="AddRestaurants.html"></a> Partner With Us</p>
                     </li>
                     <li>
                         <p>Apps For You</p>
@@ -322,40 +368,7 @@
         </div>
     </footer>
 
-    <!-- Login Form -->
-    <div class="ModelFrom">
-        <div class="modal">
-            <div class="modal-header">
-                <h2>Login</h2>
-                <button class="close-btn">&times;</button>
-            </div>
-            <div class="modal-body">
-                <div class="input-group">
-                    <select name="" id="">
-                        <option value="">+ 91</option>
-                        <option value=""><span class="flag-icon">+ 93</span></option>
-                    </select>
-                    <input type="text" placeholder="Phone" class="phone-input" required />
-                </div>
-                <button class="otp-btn">Send One Time Password</button>
-                <div class="separator"><span>Or</span></div>
-                <button class="email-btn">
-                    <span class="icon"><img src="./Image/email.svg" alt="" /></span>
-                    Continue with Email
-                </button>
-                <button class="google-btn">
-                    <div class="icon"><img src="Image/google.jpg" alt="" /></div>
-                    Sign in with Google
-                </button>
-            </div>
-            <div class="modal-footer">
-                <p>
-                    New to Zomato ?
-                    <a href="#" id="openRegistration">Create Account</a>
-                </p>
-            </div>
-        </div>
-    </div>
+
 
     <!-- Swiper Slider Cdn -->
     <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/swiper@10/swiper-bundle.min.css" />
@@ -365,75 +378,6 @@
     <script src="./Data.js"></script>
 
     <script>
-
-        const login_form = document.querySelectorAll('.ModelForm');
-        const LoginBtn3 = document.querySelector('#LoginBtn3');
-        const LoginBtn = document.querySelector('.Navbar2 .menu button');
-        const closebtn = document.querySelector('.modal-header button');
-
-
-        LoginBtn.addEventListener('click', function () {
-            login_form.style.display = 'flex'
-        });
-
-        LoginBtn3.addEventListener('click', function () {
-            login_form.style.display = 'flex'
-        });
-
-        closebtn.addEventListener('click', function () {
-            login_form.style.display = 'none'
-        });
-
-
-        const showSidebar2 = document.getElementById('Sidebar2_show');
-        const closeSidebar2 = document.getElementById('Sidebar2_close');
-        const Sidebar2 = document.querySelector('.Sidebar2');
-
-        showSidebar2.addEventListener('click', function () {
-            Sidebar2.classList.add('Sidebar2_active');
-        });
-
-        closeSidebar2.addEventListener('click', function () {
-            Sidebar2.classList.remove('Sidebar2_active');
-        });
-
-        const nav = document.querySelector("nav");
-        const body = document.querySelector("body");
-        let search_box = document.querySelector(".search_wrapper");
-        let logo = document.querySelector(".logo a");
-        let menu_icons = document.querySelector(".menu li i");
-        let menu_links = document.querySelector(".menu li a");
-
-        window.addEventListener("scroll", () => {
-            if (window.scrollY > 500) {
-                nav.classList.add("sticky_nav");
-                search_box.classList.add("sticky_search_box");
-                logo.classList.add("sticky_menu");
-                menu_links.forEach((links) => {
-                    links.classList.add("sticky_menu");
-                });
-            } else {
-                nav.classList.remove("sticky_nav");
-                search_box.classList.remove("sticky_search_box");
-                logo.classList.remove("sticky_menu");
-                menu_links.forEach((links) => {
-                    links.classList.remove("sticky_menu");
-                });
-            }
-        });
-
-
-
-        const navbar2 = document.querySelectorAll('.Navabr2');
-        window.addEventListener('scroll', function () {
-            var scroll = window.scrollY;
-            if (scroll > 100) {
-                navbar2.classList.add('sticky_nav')
-            } else {
-                navbar2.classList.remove('sticky_nav')
-            }
-        })
-
         document.addEventListener('DOMContentLoaded', function () {
             var testimonialsSplide = new Splide('.Testimonials_Splide', {
                 type: 'loop',
@@ -454,6 +398,82 @@
 
             testimonialsSplide.mount();
         });
+
+        const navbar2 = document.querySelector('.Navbar2'); // fixed typo
+
+        window.addEventListener('scroll', function () {
+            if (window.scrollY > 100) {
+                navbar2.classList.add('sticky_nav');
+            } else {
+                navbar2.classList.remove('sticky_nav');
+            }
+        });
+
+
+        const showSidebar2 = document.getElementById('Sidebar2_show');
+        const closeSidebar2 = document.getElementById('Sidebar2_close');
+        const Sidebar2 = document.querySelector('.Sidebar2');
+
+        if (showSidebar2 && Sidebar2) {
+            showSidebar2.addEventListener('click', () => {
+                Sidebar2.classList.add('Sidebar2_active');
+            });
+        }
+
+        if (closeSidebar2 && Sidebar2) {
+            closeSidebar2.addEventListener('click', () => {
+                Sidebar2.classList.remove('Sidebar2_active');
+            });
+        }
+
+
+        document.addEventListener('DOMContentLoaded', () => {
+            const login_form = document.querySelector('.ModelForm');
+            const LoginBtn3 = document.querySelector('#LoginBtn3');
+            const LoginBtn = document.querySelector('.Navbar2 .menu button');
+            const closebtn = document.querySelector('.modal-header button');
+
+            // Handle Login Modal
+            if (LoginBtn) {
+                LoginBtn.addEventListener('click', () => {
+                    login_form.style.display = 'flex';
+                });
+            }
+
+            if (LoginBtn3) {
+                LoginBtn3.addEventListener('click', () => {
+                    login_form.style.display = 'flex';
+                });
+            }
+
+            if (closebtn) {
+                closebtn.addEventListener('click', () => {
+                    login_form.style.display = 'none';
+                });
+            }
+
+            // Sticky navbar behavior
+            const nav = document.querySelector("nav");
+            const search_box = document.querySelector(".search_wrapper");
+            const logo = document.querySelector(".logo a");
+            const menu_links = document.querySelectorAll(".menu li a");
+
+            window.addEventListener("scroll", () => {
+                if (window.scrollY > 500) {
+                    nav?.classList.add("sticky_nav");
+                    search_box?.classList.add("sticky_search_box");
+                    logo?.classList.add("sticky_menu");
+                    menu_links.forEach(link => link.classList.add("sticky_menu"));
+                } else {
+                    nav?.classList.remove("sticky_nav");
+                    search_box?.classList.remove("sticky_search_box");
+                    logo?.classList.remove("sticky_menu");
+                    menu_links.forEach(link => link.classList.remove("sticky_menu"));
+                }
+            });
+        });
+
+
     </script>
 
 
