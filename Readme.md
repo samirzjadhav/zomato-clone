@@ -14,7 +14,8 @@ A responsive, feature-rich frontend clone of Zomato’s restaurant partner porta
 ## 📸 Preview
 
 ![Zomato Clone Preview](./Image/zomatologo3.webp)
-_Clean UI design | Mobile-friendly | Dynamic Components_
+
+**_Clean UI design | Mobile-friendly | Dynamic Components_**
 
 ---
 
